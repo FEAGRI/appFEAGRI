@@ -1,0 +1,27 @@
+#listacontatos li.ui-li-divider{
+	height: auto;
+}
+#listacontatos li{
+	height: 60px;
+}
+#listacontatos li a{
+	padding-top:0;
+	padding-bottom:0;
+	padding-left: 4.25em;
+}
+#listacontatos li a img{
+	border: 5px solid rgb(255,255,255);
+}
+#listacontatos li a h2{
+	font-size: 12px;
+	margin-top: 5px;
+
+}
+#listacontatos li a p{
+	
+}
+
+/*Sala de Aula*/
+h3#dia{
+	text-align: center;
+}
