@@ -14,29 +14,25 @@
 
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
 	<link rel="stylesheet" href="css/custom.css"/>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/jquery.mobile-1.4.5.min.js"></script>
 	
     
-<!--
-    <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>  
-	<script src="http://debug-software.intel.com/target/target-script-min.js#BN-c44_LGxnmfxte1U9Faj0bEiuDZ7PUSrpDX7QCh28"></script>
-
--->    
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<!--<script src="js/jquery.mobile-min.js"></script>-->
+ 
 <script type="text/javascript" src="js/sala_aula.js"></script>
 <script type="text/javascript" src="js/contatos.js"></script>
 <script type="text/javascript" src="js/protocolo.js"></script>
 <script type="text/javascript" src="js/weblinks.js"></script>
-
-<script src='cordova.js'></script>
-<script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/networkconnection.js"></script>
+<script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+<script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+<script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+<!--
 <script type="text/javascript">	
 	app.initialize();
 </script>	
-	
+-->	
 <script type="text/javascript">	
 $(function(){
 			$('#protoc_pessoa').change(function(){
@@ -100,6 +96,7 @@ $(function(){
 			<!--<li><a href="#home" class="icon home" onclick="$.afui.clearHistory()">Home</a></li>-->
 				<li><a href="#contato" class="icon user">Contatos</a></li>
             	<li><a href="#links" class="icon settings">Informações</a></li>
+            	<li><a href="#perfil" class="icon add">Perfil Usuário</a></li>
 			</ul>
 		</div>			
     </div><!-- /footer -->
@@ -147,6 +144,7 @@ $(function(){
 			<!--<li><a href="#home" class="icon home" onclick="$.afui.clearHistory()">Home</a></li>-->
 				<li><a href="#contato" class="icon user" >Contatos</a></li>
             	<li><a href="#links" class="icon settings">Informações</a></li>
+            	<li><a href="#perfil" class="icon add">Perfil Usuário</a></li>
 			</ul>
 		</div>			
     </div><!-- /footer -->
@@ -173,6 +171,7 @@ $(function(){
 			<!--<li><a href="#home" class="icon home" onclick="$.afui.clearHistory()">Home</a></li>-->
 				<li><a href="#contato" class="icon user ui-state-persist">Contatos</a></li>
             	<li><a href="#links" class="icon settings">Informações</a></li>
+            	<li><a href="#perfil" class="icon add">Perfil Usuário</a></li>
 			</ul>
 		</div>			
     </div><!-- /footer -->
@@ -202,11 +201,84 @@ $(function(){
 			<!--<li><a href="#home" class="icon home" onclick="$.afui.clearHistory()">Home</a></li>-->
 				<li><a href="#contato" class="icon user">Contatos</a></li>
             	<li><a href="#links" class="icon settings ui-state-persist">Informações</a></li>
+            	<li><a href="#perfil" class="icon add">Perfil Usuário</a></li>
 			</ul>
 		</div>			
     </div><!-- /footer -->
 </div><!-- /page --> 
 
+<div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="perfil">
+	<div data-role="header" align="center" data-position="fixed">
+        <a href="sobre.html" data-icon="info" class="ui-btn-right" data-role="button" data-transition="pop" data-rel="dialog">Sobre</a>
+		<img src="images/lg_feagri36.png"/>
+		<div data-role="navbar" >
+			<ul>
+				<li><a href="#graduacao" class="icon calendar">Graduação</a></li>
+				<li><a href="#posgrad" class="icon database">Pós-Graduação</a></li>
+			</ul>
+		</div>			
+	</div><!-- /header -->
+
+	<div data-role="content" class="ui-content"></div><!-- /content -->
+	<div data-role="content">
+			<p id="network"></p>
+					<div id="deviceready">
+						<p>Modelo: <span id="model"></span></p>
+						<p>Plataforma: <span id="platform"></span></p>
+						<p>Versão do SO: <span id="version"></span></p>
+						<p>Fabricante: <span id="manufacturer"></span></p>
+					</div>	
+			
+		<h2>Atualize seus Dados</h2>	
+		<h3>*Meus Dados*</h3>	
+		<div data-role="fieldcontain">
+		<label for="usuarios" class="ui-hidden-accessible">Tipo de Usuário:</label>
+      	<select id="usuario">
+           <option value="0">Tipo de Usuário</option>
+		   <option value="1">Aluno</option>
+		   <option value="2">Funcionário</option>
+		   <option value="3">Docente</option>
+		   <option value="4">Pesquisador</option>
+		</select>
+		</div>	
+		<div data-role="fieldcontain">
+		<label for="alunos" class="ui-hidden-accessible">Usuário Tipo Aluno:</label>
+		<select id="aluno">
+     		<option value="0">Se Aluno - Escolha</option>
+  			<option value="1">Graduação</option>
+  			<option value="2">Pós-Graduação - Mestrado</option>
+  			<option value="3">Pós-Graduação - Doutorado</option>
+		</select>
+		</div>
+		<div data-role="fieldcontain">
+		<label for="nascimento" class="ui-hidden-accessible">:</label>
+      	<select id="ano">
+
+		</select>
+		</div>	
+         <button id="btn_push">Enviar</button>
+
+         <div id="dadosuser"></div>			
+        </div><!-- /content -->	
+
+    <div data-role="footer" data-position="fixed">
+		<div data-role="navbar" >
+			<ul>
+			<!--<li><a href="#home" class="icon home" onclick="$.afui.clearHistory()">Home</a></li>-->
+				<li><a href="#contato" class="icon user">Contatos</a></li>
+            	<li><a href="#links" class="icon settings ">Informações</a></li>
+            	<li><a href="#perfil" class="icon add ui-state-persist">Perfil Usuário</a></li>
+			</ul>
+		</div>			
+    </div><!-- /footer -->
+</div><!-- /page --> 
+        <script>
+            var $select = $("#ano");
+            $select.append("<option value='0'>Ano de Ingresso</option>");
+            for(var i=2016; i > 2007; i--){
+                $select.append("<option>"+i+"</option>");
+            }
+        </script>    
 
 	
 </body>

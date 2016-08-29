@@ -35,13 +35,10 @@
 		console.log(data);
 		//limpa a div (se vc modificar ela não duplica resultados)	
 		$("#result").empty();
-		// inicio do for no array data
-		// ver resultado console.log(data[i]['Disciplina']);
-			//$("#result").append('<div class="ui-block-a ui-bar-b">Horário</div><div class="ui-block-b ui-bar-b">Sala</div><div class="ui-block-b ui-bar-b">Turma</div><div class="ui-block-d ui-bar-b">Disciplina</div><div class="ui-block-e ui-bar-b">Docente</div>');
 			for (var i = 0; i <data.length; i++) {
 				$( "#result" ).append('<tr><td>'+data[i]['Horario']+'</td><td>'+data[i]['Sala']+' </td><td>'+data[i]['Sigla']+' - '+data[i]['Turma']+'<br/>'+data[i]['Disciplina']+'</td>'+'<td>'+'<img src="http://www.feagri.unicamp.br/portal/'+data[i]['Img']+'"><br/>'+data[i]['Docente']+'</td></tr>');
 			}
-			document.getElementById("dia").innerHTML=diasemana;
+		document.getElementById("dia").innerHTML=diasemana;
 	   //append joga os resultados do for dentro da div #result 
 	   //ver um dado unitario use data[i]['Disciplina']
 	   //append só joga na div, vc pode usar dentro do append tags html, select por exemplo

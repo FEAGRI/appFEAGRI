@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-	//var url = "http://www.feagri.unicamp.br/portal/templates/simplesimon/includes/weblinks.php";
-	var url = "js/teste.json";
+	var url = "http://www.feagri.unicamp.br/portal/templates/simplesimon/includes/weblinks.php";
+	//var url = "js/teste.json";
 	var $weblinks = $("#weblinks");
 
 	$.getJSON(url)
