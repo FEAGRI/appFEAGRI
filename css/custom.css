@@ -22,6 +22,53 @@
 }
 
 /*Sala de Aula*/
-h3#dia{
-	text-align: center;
+
+h2.diatitle{text-align: center;}
+
+#graduacao ul#result{
+	margin: 0;
+	padding: 0;
 }
+
+#graduacao ul#result li {
+    display: block;
+    box-shadow: -2px 2px 1px rgba(0,0,0,0.2);
+    padding: 30px 30px 5px 30px;
+    margin: 10px;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+#graduacao ul#result li div.h, #graduacao ul#result li div.s {
+	font-size: 12px;
+    position: absolute;
+    margin-top: -21px;
+}
+#graduacao ul#result li div.h {
+	color: rgb(180,180,180);
+}
+#graduacao ul#result li div.s{ 
+    right: 0;
+    margin-right: 20px;
+    color: rgb(180,180,180);
+}
+#graduacao ul#result li div.do{
+	position: relative;
+	color: rgb(180,180,180);
+}
+
+#graduacao ul#result li div.do img{
+	width: 25px;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+#graduacao ul#result li div.do span{
+	margin-top: 11px;
+    position: absolute;
+    font-size: 12px;
+}
+
+
+
+
+
