@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="stylesheet" type="text/css" href="lib/appframework/icons.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="lib/appframework/icons.css" /> -->
 
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
 	<link rel="stylesheet" href="css/custom.css"/>
@@ -46,23 +46,33 @@ $(function(){
 				}
 			});
 });
+
+console.log($("#appmenu").getActivePage());
 </script>	
 
 </head>
 
 <body>
 
+<div data-role="panel" id="appmenu" data-display="push"  data-position="right">
+	<div data-role="header" align="center" data-position="fixed">
+		<img src="images/lg_feagri36.png"/>
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left" data-transition="slide">Menu</a>			
+	</div><!-- /header -->	
+	<ul data-role="listview">
+		<li><a href="#graduacao" class="icon calendar ui-state-persist">Graduação</a></li>
+		<li><a href="#posgrad" class="icon database">Pós-Graduação</a></li>
+		<li><a href="#contato" class="icon user">Contatos</a></li>
+        <li><a href="#links" class="icon settings">Informações</a></li>
+        <li><a href="#perfil" class="icon add">Perfil Usuário</a></li>
+		<li><a href="sobre.html" class="icon info" data-transition="pop" data-rel="dialog">Sobre</a></li>
+	</ul>
+</div><!-- /panel -->
+
 <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="graduacao">
 	<div data-role="header" align="center" data-position="fixed">
-        <a href="sobre.html" data-icon="info" class="ui-btn-right" data-role="button" data-transition="pop" data-rel="dialog">Sobre</a>
 		<img src="images/lg_feagri36.png"/>
-		<div data-role="navbar" >
-			<ul>
-				<li><a href="#graduacao" class="icon calendar ui-state-persist">Graduação</a></li>
-				<li><a href="#posgrad" class="icon database">Pós-Graduação</a></li>
-			</ul>
-		</div>			
-		
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left">Menu</a>			
 	</div><!-- /header -->
 
         <div data-role="content">
@@ -86,28 +96,13 @@ $(function(){
 			
         </div><!-- /content -->
 
-    <div data-role="footer" data-position="fixed">
-		<div data-role="navbar" >
-			<ul>
-			<!--<li><a href="#home" class="icon home" onclick="$.afui.clearHistory()">Home</a></li>-->
-				<li><a href="#contato" class="icon user">Contatos</a></li>
-            	<li><a href="#links" class="icon settings">Informações</a></li>
-            	<li><a href="#perfil" class="icon add">Perfil Usuário</a></li>
-			</ul>
-		</div>			
-    </div><!-- /footer -->
+    
 </div><!-- /page --> 
 
 <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="posgrad">
 	<div data-role="header" align="center" data-position="fixed">
-        <a href="sobre.html" data-icon="info" class="ui-btn-right" data-role="button" data-transition="pop" data-rel="dialog">Sobre</a>
 		<img src="images/lg_feagri36.png"/>
-		<div data-role="navbar" >
-			<ul>
-				<li><a href="#graduacao" class="icon calendar ">Graduação</a></li>
-				<li><a href="#posgrad" class="icon database ui-state-persist">Pós-Graduação</a></li>
-			</ul>
-		</div>			
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left">Menu</a>			
 	</div><!-- /header -->
 
 	<div data-role="content">
@@ -134,55 +129,24 @@ $(function(){
 		
     </div><!-- /content -->
 
-    <div data-role="footer" data-position="fixed">
-		<div data-role="navbar" >
-			<ul>
-			<!--<li><a href="#home" class="icon home" onclick="$.afui.clearHistory()">Home</a></li>-->
-				<li><a href="#contato" class="icon user" >Contatos</a></li>
-            	<li><a href="#links" class="icon settings">Informações</a></li>
-            	<li><a href="#perfil" class="icon add">Perfil Usuário</a></li>
-			</ul>
-		</div>			
-    </div><!-- /footer -->
+    
 </div><!-- /page --> 
 	
 <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="contato">
 	<div data-role="header" align="center" data-position="fixed">
-        <a href="sobre.html" data-icon="info" class="ui-btn-right" data-role="button" data-transition="pop" data-rel="dialog">Sobre</a>
 		<img src="images/lg_feagri36.png"/>
-		<div data-role="navbar" >
-			<ul>
-				<li><a href="#graduacao" class="icon calendar">Graduação</a></li>
-				<li><a href="#posgrad" class="icon database">Pós-Graduação</a></li>
-			</ul>
-		</div>			
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left">Menu</a>			
 	</div><!-- /header -->
-
 	<div data-role="content" class="ui-content" id="listacontatos">
     </div><!-- /content -->
 
-    <div data-role="footer" data-position="fixed">
-		<div data-role="navbar" >
-			<ul>
-			<!--<li><a href="#home" class="icon home" onclick="$.afui.clearHistory()">Home</a></li>-->
-				<li><a href="#contato" class="icon user ui-state-persist">Contatos</a></li>
-            	<li><a href="#links" class="icon settings">Informações</a></li>
-            	<li><a href="#perfil" class="icon add">Perfil Usuário</a></li>
-			</ul>
-		</div>			
-    </div><!-- /footer -->
+   
 </div><!-- /page --> 
 
 <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="links">
 	<div data-role="header" align="center" data-position="fixed">
-        <a href="sobre.html" data-icon="info" class="ui-btn-right" data-role="button" data-transition="pop" data-rel="dialog">Sobre</a>
 		<img src="images/lg_feagri36.png"/>
-		<div data-role="navbar" >
-			<ul>
-				<li><a href="#graduacao" class="icon calendar">Graduação</a></li>
-				<li><a href="#posgrad" class="icon database">Pós-Graduação</a></li>
-			</ul>
-		</div>			
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left">Menu</a>			
 	</div><!-- /header -->
 
 	<div data-role="content" class="ui-content" id="weblinks">
@@ -191,28 +155,12 @@ $(function(){
 		
 	</div><!-- /content -->
 
-    <div data-role="footer" data-position="fixed">
-		<div data-role="navbar" >
-			<ul>
-			<!--<li><a href="#home" class="icon home" onclick="$.afui.clearHistory()">Home</a></li>-->
-				<li><a href="#contato" class="icon user">Contatos</a></li>
-            	<li><a href="#links" class="icon settings ui-state-persist">Informações</a></li>
-            	<li><a href="#perfil" class="icon add">Perfil Usuário</a></li>
-			</ul>
-		</div>			
-    </div><!-- /footer -->
 </div><!-- /page --> 
 
 <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="perfil">
 	<div data-role="header" align="center" data-position="fixed">
-        <a href="sobre.html" data-icon="info" class="ui-btn-right" data-role="button" data-transition="pop" data-rel="dialog">Sobre</a>
 		<img src="images/lg_feagri36.png"/>
-		<div data-role="navbar" >
-			<ul>
-				<li><a href="#graduacao" class="icon calendar">Graduação</a></li>
-				<li><a href="#posgrad" class="icon database">Pós-Graduação</a></li>
-			</ul>
-		</div>			
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left">Menu</a>			
 	</div><!-- /header -->
 
 	<div data-role="content" class="ui-content"></div><!-- /content -->
@@ -257,16 +205,6 @@ $(function(){
          <div id="dadosuser"></div>			
         </div><!-- /content -->	
 
-    <div data-role="footer" data-position="fixed">
-		<div data-role="navbar" >
-			<ul>
-			<!--<li><a href="#home" class="icon home" onclick="$.afui.clearHistory()">Home</a></li>-->
-				<li><a href="#contato" class="icon user">Contatos</a></li>
-            	<li><a href="#links" class="icon settings ">Informações</a></li>
-            	<li><a href="#perfil" class="icon add ui-state-persist">Perfil Usuário</a></li>
-			</ul>
-		</div>			
-    </div><!-- /footer -->
 </div><!-- /page --> 
         <script>
             var $select = $("#ano");
