@@ -12,12 +12,12 @@ ul#header li div.di, ul#result li div.di{	width: 45%; }
 ul#header li div.do, ul#result li div.do{	width: 35%; }
 
 ul#result {
-	height: 490px;
+	height: auto;
 	overflow: hidden;
 }
 
 ul#result li {
-	height: 9px;
+	height: 49px;
 	padding: 14px;
 	border-bottom: 1px dashed #ccc;
 }
