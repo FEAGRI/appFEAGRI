@@ -29,6 +29,7 @@
 			diasemana="Sábado"
 	}
 		var url = "http://www.feagri.unicamp.br/portal/sistemas-intranet/grade-horarios?salaaula_ativa=S&salaaula_ano=2016&salaaula_anosemestre=2&salaaula_semana="+semana;
+		//var url = "js/sala_aula.json";
 		// busca a URL e cria o array
 		$.getJSON (url, function(data){
 		// vendo o array no console
@@ -39,10 +40,9 @@
 				//$( "#result" ).append('<tr><td>'+data[i]['Horario']+'</td><td>'+data[i]['Sala']+' </td><td>'+data[i]['Sigla']+' - '+data[i]['Turma']+'<br/>'+data[i]['Disciplina']+'</td>'+'<td>'+'<img src="http://www.feagri.unicamp.br/portal/'+data[i]['Img']+'"><br/>'+data[i]['Docente']+'</td></tr>');
 		        var listHtml = '<li>';
 		        listHtml += '<div class="h">' + data[i]['Horario'] + '</div>';
-		        listHtml += '<div class="s">' + data[i]['Sala'] + '</div>';
-		        //listHtml += '<div class="t">' + aula.turma + '</div>';
-		        listHtml += '<div class="di">' + data[i]['Turma'] + '|' + data[i]['Sigla'] +' - '+ data[i]['Disciplina'] + '</div>';
-		        listHtml += '<div class="do">' + '<img src="http://www.feagri.unicamp.br/portal/'+data[i]['Img']+'">' + data[i]['Docente'] + '</div>';
+		        listHtml += '<div class="s"><strong>Sala: </strong>' + data[i]['Sala'] + ' | <strong>Turma: </strong>' + data[i]['Turma']  + '</div>';
+		        listHtml += '<div class="di"><strong>' + data[i]['Sigla'] +'</strong> - '+ data[i]['Disciplina'] + '</div>';
+		        listHtml += '<div class="do">' + '<img src="http://www.feagri.unicamp.br/portal/'+data[i]['Img']+'"><span>' + data[i]['Docente'] + '</span></div>';
 		        listHtml += '</li>';
 
       			$("#result").append(listHtml);
