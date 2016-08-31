@@ -32,8 +32,7 @@
 		//var url = "js/sala_aula.json";
 		// busca a URL e cria o array
 		$.getJSON (url, function(data){
-		// vendo o array no console
-		console.log(data);
+		
 		//limpa a div (se vc modificar ela não duplica resultados)	
 		$("#result").empty();
 			for (var i = 0; i <data.length; i++) {

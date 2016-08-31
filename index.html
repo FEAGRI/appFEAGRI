@@ -14,66 +14,45 @@
 
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
 	<link rel="stylesheet" href="css/custom.css"/>
-	<link rel="stylesheet" href="css/sala_aula.css"/>
-	
     
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 <!--<script src="js/jquery.mobile-min.js"></script>-->
  
+<script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+
+<script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
 <script type="text/javascript" src="js/sala_aula.js"></script>
 <script type="text/javascript" src="js/contatos.js"></script>
 <script type="text/javascript" src="js/protocolo.js"></script>
 <script type="text/javascript" src="js/weblinks.js"></script>
 <script type="text/javascript" src="js/networkconnection.js"></script>
-<script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
-<script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
 <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
 
-<script type="text/javascript">	
-$(function(){
-			$('#protoc_pessoa').change(function(){
-				$('#documento').empty();
-				$("#documento").append('');
-				if ( $(this).val() == 0){ // Alunos
-					$("#documento").append('<label for="protoc_aluno" class="ui-hidden-accessible">Aluno (RA)</label>');
-					$("#documento").append('<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="number" name="protoc_aluno" id="protoc_aluno" placeholder="Aluno (RA)" required /></div>');
-				} else if(  $(this).val() == 1 ){ // Funcionários/Docentes
-					$("#documento").append('<label for="protoc_funcionario" class="ui-hidden-accessible">Funcionário/Docente (Matrícula)</label>');
-					$("#documento").append('<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="number" name="protoc_funcionario" id="protoc_funcionario" placeholder="Funcionário/Docente (Matrícula)" required /></div>');
-				} else if (  $(this).val() == 2 ){ // Outros
-					$("#documento").append('<label for="protoc_outros" class="ui-hidden-accessible">CPF</label>');
-					$("#documento").append('<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="number" name="protoc_outros" id="protoc_outros" placeholder="CPF" required /></div>');
-				}
-			});
-});
-
-console.log($("#appmenu").getActivePage());
-</script>	
 
 </head>
 
 <body>
 
-<div data-role="panel" id="appmenu" data-display="push"  data-position="right">
-	<div data-role="header" align="center" data-position="fixed">
+<div data-role="panel" id="appmenu" data-display="overlay"  data-position="left" data-theme="a">
+	<div data-role="header" align="left" data-position="fixed" class="white">
 		<img src="images/lg_feagri36.png"/>
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left" data-transition="slide">Menu</a>			
 	</div><!-- /header -->	
-	<ul data-role="listview">
-		<li><a href="#graduacao" class="icon calendar ui-state-persist">Graduação</a></li>
-		<li><a href="#posgrad" class="icon database">Pós-Graduação</a></li>
-		<li><a href="#contato" class="icon user">Contatos</a></li>
-        <li><a href="#links" class="icon settings">Informações</a></li>
-        <li><a href="#perfil" class="icon add">Perfil Usuário</a></li>
-		<li><a href="sobre.html" class="icon info" data-transition="pop" data-rel="dialog">Sobre</a></li>
+	<ul>
+		<li><a href="#graduacao" class="ui-btn ui-icon-calendar ui-btn-icon-left">Graduação</a></li>
+		<li><a href="#posgrad" class="ui-btn ui-icon-grid ui-btn-icon-left">Pós-Graduação</a></li>
+		<li><a href="#contato" class="ui-btn ui-icon-bullets ui-btn-icon-left">Contatos</a></li>
+        <li><a href="#links" class="ui-btn ui-icon-bullets ui-btn-icon-left">Informações</a></li>
+        <li><a href="#perfil" class="ui-btn ui-icon-edit ui-btn-icon-left">Perfil Usuário</a></li>
+		<li><a href="#sobre" class="ui-btn ui-icon-info ui-btn-icon-left">Sobre</a></li>
 	</ul>
 </div><!-- /panel -->
 
 <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="graduacao">
 	<div data-role="header" align="center" data-position="fixed">
 		<img src="images/lg_feagri36.png"/>
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left">Menu</a>			
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+		<!-- <h3 class="ui-bar ui-bar-a">Contatos</h3>			 -->
 	</div><!-- /header -->
 
         <div data-role="content">
@@ -88,7 +67,7 @@ console.log($("#appmenu").getActivePage());
 <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="posgrad">
 	<div data-role="header" align="center" data-position="fixed">
 		<img src="images/lg_feagri36.png"/>
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left">Menu</a>			
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
 	</div><!-- /header -->
 
 	<div data-role="content">
@@ -119,11 +98,13 @@ console.log($("#appmenu").getActivePage());
 </div><!-- /page --> 
 	
 <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="contato">
-	<div data-role="header" align="center" data-position="fixed">
+	<div data-role="header" align="right" data-position="fixed">
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>		
+		<h3>Contatos</h3>
 		<img src="images/lg_feagri36.png"/>
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left">Menu</a>			
 	</div><!-- /header -->
 	<div data-role="content" class="ui-content" id="listacontatos">
+
     </div><!-- /content -->
 
    
@@ -132,21 +113,17 @@ console.log($("#appmenu").getActivePage());
 <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="links">
 	<div data-role="header" align="center" data-position="fixed">
 		<img src="images/lg_feagri36.png"/>
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left">Menu</a>			
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>		
 	</div><!-- /header -->
 
-	<div data-role="content" class="ui-content" id="weblinks">
-	</div><!-- /content -->
-	<div data-role="content" class="ui-content" id="conexao">
-		
-	</div><!-- /content -->
-
+	<div data-role="content" class="ui-content" id="weblinks"></div><!-- /content -->
+	
 </div><!-- /page --> 
 
 <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="perfil">
 	<div data-role="header" align="center" data-position="fixed">
 		<img src="images/lg_feagri36.png"/>
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-left">Menu</a>			
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
 	</div><!-- /header -->
 
 	<div data-role="content" class="ui-content"></div><!-- /content -->
@@ -192,14 +169,22 @@ console.log($("#appmenu").getActivePage());
         </div><!-- /content -->	
 
 </div><!-- /page --> 
-        <script>
-            var $select = $("#ano");
-            $select.append("<option value='0'>Ano de Ingresso</option>");
-            for(var i=2016; i > 2007; i--){
-                $select.append("<option>"+i+"</option>");
-            }
-        </script>    
+<div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="sobre">
+	<div data-role="header" align="center" data-position="fixed">
+		<img src="images/lg_feagri36.png"/>
+		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+	</div><!-- /header -->
 
+	<div data-role="content">
+		<h2 align="center">Sobre</h2>
+ 		<p>Este é um aplicativo que tem por objetivo oferecer aos usuários
+          de dispositivos móveis, serviços da Faculdade de Engenharia Agrícola/Unicamp, que possam facilitar o dia a dia dos mesmos.</p>
+        <p>A ideia é que o aplicativo ganhe novos serviços a medida que a demanda de informações necessárias a comunidade, vise uma aplicação móvel, além do Website</p>
+        <span>@2016 FEAGRI/UNICAMP - informatica@feagri.unicamp.br</span>		
+	</div>
+		
+
+</div><!-- /page --> 
 	
 </body>
 

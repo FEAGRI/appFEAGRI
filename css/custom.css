@@ -68,7 +68,43 @@ h2.diatitle{text-align: center;}
     font-size: 12px;
 }
 
+.white{
+	background-color: rgb(255,255,255);
+}
+/* Headers */
+.ui-header .ui-title{
+	display:  inline-block;
+}
 
+/*Menu Button*/
+div[data-role='header'] > a.ui-btn {
+    border: none;
+    background-color: transparent;
+}
 
+div[data-role='header'] > a.ui-btn:hover .ui-btn-icon-left:after {
+    border: none;
+    background-color: white;
+}
+/*Panel*/
+#appmenu .ui-panel-inner {
+    padding: 0;
+    margin: 0;
+    background-color: #F6F6F6;
+}
+#appmenu .ui-panel-inner div[data-role='header']{
+	padding: 5px 5px 0;
+}
+#appmenu ul {
+    padding: 0;
+    margin: 0;
+}
 
-
+#appmenu ul li a {
+    margin: 0;
+    border: 0;
+    text-align: left;
+    font-size: 13px;
+    color: rgb(100,100,100);
+    padding-left: 40px;
+}

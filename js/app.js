@@ -59,3 +59,32 @@ document.addEventListener("onload", onAppReady, false) ;
 
 // NOTE: change "dev.LOG" in "init-dev.js" to "true" to enable some console.log
 // messages that can help you debug Cordova app initialization issues.
+
+$(document).ready(function(){
+    $('#protoc_pessoa').change(function(){
+        $('#documento').empty();
+        $("#documento").append('');
+        if ( $(this).val() == 0){ // Alunos
+            $("#documento").append('<label for="protoc_aluno" class="ui-hidden-accessible">Aluno (RA)</label>');
+            $("#documento").append('<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="number" name="protoc_aluno" id="protoc_aluno" placeholder="Aluno (RA)" required /></div>');
+        } else if(  $(this).val() == 1 ){ // Funcionários/Docentes
+            $("#documento").append('<label for="protoc_funcionario" class="ui-hidden-accessible">Funcionário/Docente (Matrícula)</label>');
+            $("#documento").append('<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="number" name="protoc_funcionario" id="protoc_funcionario" placeholder="Funcionário/Docente (Matrícula)" required /></div>');
+        } else if (  $(this).val() == 2 ){ // Outros
+            $("#documento").append('<label for="protoc_outros" class="ui-hidden-accessible">CPF</label>');
+            $("#documento").append('<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="number" name="protoc_outros" id="protoc_outros" placeholder="CPF" required /></div>');
+        }
+    });
+
+    var $select = $("#ano");
+    $select.append("<option value='0'>Ano de Ingresso</option>");
+    for(var i=2016; i > 2007; i--){
+        $select.append("<option>"+i+"</option>");
+    }
+
+    // Inicia o Painel
+    $( "#appmenu" ).panel();
+
+    // Atualiza a lista
+    //$("#listacontatos").listview("refresh");
+});
