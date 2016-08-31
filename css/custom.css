@@ -72,8 +72,22 @@ h2.diatitle{text-align: center;}
 	background-color: rgb(255,255,255);
 }
 /* Headers */
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, 
+html .ui-bar-a .ui-bar-inherit, 
+html .ui-body-a .ui-bar-inherit, 
+html body .ui-group-theme-a .ui-bar-inherit{
+	background-color: rgb(255,255,255);
+	background-color: rgb(255,255,255);
+    box-shadow: 0px -5px 10px rgba(0,0,0,1);
+}
+div[data-role=header] img {
+    margin: 1px 5px;
+    float: right;
+}
 .ui-header .ui-title{
 	display:  inline-block;
+	color: #408151;
+	margin: 0;
 }
 
 /*Menu Button*/
