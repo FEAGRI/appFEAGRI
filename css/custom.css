@@ -80,13 +80,13 @@ html body .ui-group-theme-a .ui-bar-inherit{
 	background-color: rgb(255,255,255);
     box-shadow: 0px -5px 10px rgba(0,0,0,1);
 }
-div[data-role=header] img {
+div[data-role=page] > div[data-role=header] img {
     margin: 1px 5px;
     float: right;
 }
 .ui-header .ui-title{
 	display:  inline-block;
-	color: #408151;
+	color: #408151; /*Verde da logo*/
 	margin: 0;
 }
 
@@ -94,12 +94,22 @@ div[data-role=header] img {
 div[data-role='header'] > a.ui-btn {
     border: none;
     background-color: transparent;
+    padding-top: 5px;
 }
 
-div[data-role='header'] > a.ui-btn:hover .ui-btn-icon-left:after {
+div[data-role='header'] > a.ui-btn .ui-btn-icon-left:after, 
+div[data-role='header'] > a.ui-btn .ui-btn-icon-right:after, 
+div[data-role='header'] > a.ui-btn .ui-btn-icon-top:after, 
+div[data-role='header'] > a.ui-btn .ui-btn-icon-bottom:after, 
+div[data-role='header'] > a.ui-btn .ui-btn-icon-notext:after {
+	color: #408151;
+}
+div[data-role='header'] > a.ui-btn:hover,
+div[data-role='header'] > a:hover.ui-btn {
     border: none;
     background-color: white;
 }
+
 /*Panel*/
 #appmenu .ui-panel-inner {
     padding: 0;
