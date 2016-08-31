@@ -29,6 +29,9 @@
 .ui-field-contain {
 	border:none;
 }
+#documento{
+	display: none;
+}
 
 /*Sala de Aula*/
 
@@ -157,3 +160,4 @@ div[data-role='header'] a.ui-btn:focus {
 #appmenu ul li a.ui-btn:focus {
 	box-shadow: none;
 }
+
