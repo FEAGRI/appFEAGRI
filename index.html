@@ -73,7 +73,7 @@
 		<h2>Protocolo de Solicitações</h2>
 		<h3>Sistema de Protoloco Eletrônico - Consulta Solicitações</h3>
 		<form action="#" method="get" accept-charset="utf-8">
-			<div data-role="fieldcontain">
+			<div data-role="fieldcontain" id="solicitante">
 				<label for="solicitante" class="ui-hidden-accessible">Escolha</label>
 				<select name="protoc_pessoa" id="protoc_pessoa" data-native-menu="false" required>
 					<option value="">Solicitante</option>
@@ -82,7 +82,7 @@
 					<option value="2">Outros</option>
 				</select>
 			</div>			
-			<div data-role="fieldcontain" id="documento"></div>
+			
 			<div data-role="fieldcontain">
 				<label for="protocolo" class="ui-hidden-accessible">Protocolo Número</label>
 				<input type="number" name="protoc_num" id="protoc_num" placeholder="Protocolo Número" required/>

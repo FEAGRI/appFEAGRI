@@ -62,6 +62,7 @@ document.addEventListener("onload", onAppReady, false) ;
 
 $(document).ready(function(){
     $('#protoc_pessoa').change(function(){
+        $('#solicitante').after('<div data-role="fieldcontain" id="documento"></div>');
         $('#documento').empty();
         $("#documento").append('');
         if ( $(this).val() == 0){ // Alunos
