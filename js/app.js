@@ -85,7 +85,14 @@ $(document).ready(function(){
 
     // Inicia o Painel
     $( "#appmenu" ).panel();
+/*
+    $( "#appmenu li a" ).on('click', function(){
+        var currentPage = $(this).attr("href");
+        
+        var activePage = $( "div[data-role=page]" ).pagecontainer( "getActivePage" );
+        console.log(activePage);
+        //$( "#appmenu li a" ).addClass("ui-btn-active");
+    });
+*/
 
-    // Atualiza a lista
-    //$("#listacontatos").listview("refresh");
 });

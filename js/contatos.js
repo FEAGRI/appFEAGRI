@@ -37,7 +37,7 @@ $(document).ready(function(){
             	var k = j.replace('#contatoItem','');
 
             	contatoPage += '<div data-role="page" id="contatoItem' + k + '">';
-            	contatoPage += '<div data-role="header" align="center"><a href="#contato">Voltar</a><img src="images/lg_feagri36.png"/></div>';
+            	contatoPage += '<div data-role="header" align="center" data-position="fixed"><a href="#contato" class="btn-normal">Voltar</a><img src="images/lg_feagri36.png"/></div>';
 				contatoPage += '<div role="main" class="ui-content">';
 				contatoPage += '<img src="http://www.feagri.unicamp.br/portal/'+data[k].foto+'">';
 				contatoPage += '<h3 class="ui-bar ui-bar-a">'+data[k].nome+'</h3>';

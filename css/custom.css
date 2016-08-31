@@ -146,3 +146,14 @@ div[data-role='header'] a.ui-btn:focus {
     color: rgb(100,100,100);
     padding: 20px 40px;
 }
+
+#appmenu ul li a.ui-btn-active{
+	background-color: #408151;
+	color:  #fff;
+}
+#appmenu ul li a.ui-btn-active .ui-btn-icon-left:after{
+	background-color: #408151;
+}
+#appmenu ul li a.ui-btn:focus {
+	box-shadow: none;
+}
