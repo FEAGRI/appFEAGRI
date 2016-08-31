@@ -24,8 +24,10 @@
 	margin-top: 5px;
 
 }
-#listacontatos li a p{
-	
+
+/*Pós - Graduação*/
+.ui-field-contain {
+	border:none;
 }
 
 /*Sala de Aula*/
@@ -141,7 +143,6 @@ div[data-role='header'] a.ui-btn:focus {
     margin: 0;
     border: 0;
     text-align: left;
-    font-size: 13px;
     color: rgb(100,100,100);
-    padding-left: 40px;
+    padding: 20px 40px;
 }

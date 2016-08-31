@@ -19,7 +19,6 @@ $(document).ready(function(){
 		}		
 		$.getJSON(url)
 		.done(function(data){
-			console.log(data);		
 			//limpa a div (se vc modificar ela não duplica resultados)	
 			$("#resultprotoc").empty();
 			$("#resultprotoc").append('<h3>Status</h3>');
@@ -61,13 +60,7 @@ $(document).ready(function(){
 			}
 		})
 		.fail(function(msg, textStatus, erro){
-			document.getElementById("resultprotoc").innerHTML="não foi possível exibir o resultado...";
-            //alert(textStatus);
-			//alert(msg);
-			//alert(erro);
-            console.log(erro);
-            console.log(textStatus);
-            console.log(msg);            
+			document.getElementById("resultprotoc").innerHTML="não foi possível exibir o resultado...";            
 		});
 	});
 	$(document).on('click', '#resultprotoc div', function() {
