@@ -122,33 +122,31 @@
 
 	<div data-role="content" class="ui-content"></div><!-- /content -->
 	<div data-role="content">
-		<p id="network"></p>
-		<div id="deviceready">
-			<p>Modelo: <span id="model"></span></p>
-			<p>Plataforma: <span id="platform"></span></p>
-			<p>Versão do SO: <span id="version"></span></p>
-			<p>Fabricante: <span id="manufacturer"></span></p>
-		</div>	
+		<strong>Tipo de conexão</strong>: <span id="network"></span>
 			
 		<h2>Atualize seus Dados</h2>	
-		<h3>*Meus Dados*</h3>	
+		<h3>Esses dados serão necessários para lhes enviar Notificações pelas Secretarias da Faculdade</h3>	
+		<div data-role="fieldcontain">
+		<label for="usuario-matricula" class="ui-hidden-accessible">Matrícula:</label>
+		<input type="number" name="matricula" placeholder="Número: RA ou Matrícula" required>
+		</div>	
 		<div data-role="fieldcontain">
 		<label for="usuarios" class="ui-hidden-accessible">Tipo de Usuário:</label>
-      	<select id="usuario">
+      	<select id="usuario" required>
            <option value="0">Tipo de Usuário</option>
-		   <option value="1">Aluno</option>
-		   <option value="2">Funcionário</option>
-		   <option value="3">Docente</option>
-		   <option value="4">Pesquisador</option>
+		   <option value="aluno">Aluno</option>
+		   <option value="funcionario">Funcionário</option>
+		   <option value="docente">Docente</option>
+		   <option value="pesquisador">Pesquisador</option>
 		</select>
 		</div>	
 		<div data-role="fieldcontain">
 		<label for="alunos" class="ui-hidden-accessible">Usuário Tipo Aluno:</label>
 		<select id="aluno">
      		<option value="0">Se Aluno - Escolha</option>
-  			<option value="1">Graduação</option>
-  			<option value="2">Pós-Graduação - Mestrado</option>
-  			<option value="3">Pós-Graduação - Doutorado</option>
+  			<option value="graduacao">Graduação</option>
+  			<option value="pos-graduacao-mestrado">Pós-Graduação - Mestrado</option>
+  			<option value="pos-graduacao-doutorado">Pós-Graduação - Doutorado</option>
 		</select>
 		</div>
 		<div data-role="fieldcontain">
@@ -170,9 +168,8 @@
 		<img src="images/lg_feagri36.png"/>
 	</div><!-- /header -->
 	<div data-role="content">
- 		<p>Este é um aplicativo que tem por objetivo oferecer aos usuários
-          de dispositivos móveis, serviços da Faculdade de Engenharia Agrícola/Unicamp, que possam facilitar o dia a dia dos mesmos.</p>
-        <p>A ideia é que o aplicativo ganhe novos serviços a medida que a demanda de informações necessárias a comunidade, vise uma aplicação móvel, além do Website</p>
+ 		<p>Este é um aplicativo que tem por objetivo disponibiizar serviços da Faculdade de Engenharia Agrícola/Unicamp, que possam facilitar o dia a dia dos usuários dessa comunidade.</p>
+        <p>O aplicativo pode ganhar novos serviços à medida que aumente a demanda de informações que sejam úteis a serem disponibilizados neste App Mobile.</p>
         <span>@2016 FEAGRI/UNICAMP - informatica@feagri.unicamp.br</span>		
 	</div>
 </div><!-- /page Sobre --> 
