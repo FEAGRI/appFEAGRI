@@ -22,7 +22,7 @@ $(document).ready(function(){
 				contatosHTML += data.nome;
 				contatosHTML += '</h2>';
 				contatosHTML += '<p>';
-				contatosHTML += data.gruponame .' | '. data.funcao;
+				contatosHTML += data.gruponame +' | '+ data.funcao;
 				contatosHTML += '</p>';
 				contatosHTML += '</a></li>';	 
             });
