@@ -95,4 +95,47 @@ $(document).ready(function(){
     });
 */
 
+       // Show an alert box if a notification comes in when the user is in your app.
+        
+        $("button").on("click", function (e) {
+            e.preventDefault();
+            var usuario = $("#usuario option:selected").text();
+            var aluno = $("#aluno option:selected").text();
+            var ano = $("#ano option:selected").text();
+
+            var usuarioVal = $("#usuario option:selected").attr("value");
+            var alunoVal = $("#aluno option:selected").attr("value");
+            var anoVal = $("#ano option:selected").attr("value");
+            var matricula = $("#matricula").prop("value");
+            
+            var mydate = new Date();
+            var year = mydate.getFullYear();    
+            var idade = (year - ano);
+
+            if(usuarioVal !== "0" ){
+                window.plugins.OneSignal.sendTag("usuario", usuarioVal);
+                window.plugins.OneSignal.sendTag("matricula", matricula);
+                if (alunoVal !== "0") {
+                    window.plugins.OneSignal.sendTag("aluno", alunoVal);
+                    window.plugins.OneSignal.sendTag("ano", anoVal);
+                } else {
+                    if (usuarioVal == 'aluno'){
+                        alert("Campo Se Aluno - Escolha, é necessário!");        
+                        alert("Campo Ano de Ingresso, é necessário!");        
+
+                    }
+                }
+                var resHtml = '<div> Matricula: ' + matricula + '</div>';
+                    resHtml += '<div> Usuário ' + usuario + '</div>';
+                    resHtml += '<div> Tipo de Aluno: ' + aluno + '</div>';
+                    resHtml += '<div> Ano de ingresso: ' + ano + '</div>';
+                $("#dadosuser").html(resHtml);
+            } else {
+                alert("Campo usuário é necessário!");
+            }
+            
+            
+        });
+
+
 });
