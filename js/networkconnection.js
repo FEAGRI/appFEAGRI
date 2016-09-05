@@ -44,6 +44,8 @@
                 } else {
                     if (usuarioVal == 'aluno'){
                         alert("Campo Se Aluno - Escolha, é necessário!");        
+                        alert("Campo Ano de Ingresso, é necessário!");        
+
                     }
                 }
                 var resHtml = '<div> Matricula: ' + matricula + '</div>';
