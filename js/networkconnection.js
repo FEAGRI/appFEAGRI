@@ -35,7 +35,7 @@
             var idade = (year - ano);
 
             if(usuarioVal !== "0" ){
-                window.plugins.OneSignal.sendTag("usuario", usuario);
+                window.plugins.OneSignal.sendTag("usuario", usuarioVal);
                 window.plugins.OneSignal.sendTag("matricula", matricula);
                 if (alunoVal !== "0") {
                     window.plugins.OneSignal.sendTag("aluno", alunoVal);
