@@ -42,7 +42,7 @@ $(document).ready(function(){
 				contatoPage += '<img src="http://www.feagri.unicamp.br/portal/'+data[k].foto+'">';
 				contatoPage += '<h3 class="ui-bar ui-bar-a">'+data[k].nome+'</h3>';
 				contatoPage += '<div class="ui-body">';
-          		contatoPage += '<p><strong>'+data[k].gruponame+'</strong></p>';
+          		contatoPage += '<p><strong>Grupo de Usuário: </strong>'+data[k].gruponame+'</p>';
           		contatoPage += '<p><strong>Função: </strong>'+data[k].funcao+'</p>';
           		contatoPage += '<p><strong>Email: </strong>';
 				contatoPage += '<a href="mailto:'+data[k].email+'">'+data[k].email+'</a></p>';
