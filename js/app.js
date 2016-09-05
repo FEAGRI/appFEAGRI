@@ -77,11 +77,29 @@ $(document).ready(function(){
         }
     });
 
+    /*Perfil de Usuário*/
+    var $select = $("#ano");
+    
     var $select = $("#ano");
     $select.append("<option value='0'>Ano de Ingresso</option>");
     for(var i=2016; i > 2007; i--){
         $select.append("<option>"+i+"</option>");
     }
+    $("#fieldAluno").hide();
+    $("#fieldAno").hide();
+    $("#usuario").on("change", function(){
+        var $usuario = $(this).val();
+        if($usuario !== "aluno"){
+            $("#fieldAluno").hide();
+            $("#fieldAno").hide();
+        } else {
+            $("#fieldAluno").show();
+            $("#fieldAno").show();
+        }
+    });
+    
+
+    
 
     // Inicia o Painel
     $( "#appmenu" ).panel();
@@ -115,6 +133,7 @@ $(document).ready(function(){
             if(usuarioVal !== "0" ){
                 window.plugins.OneSignal.sendTag("usuario", usuarioVal);
                 window.plugins.OneSignal.sendTag("matricula", matricula);
+                window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
                 if (alunoVal !== "0") {
                     window.plugins.OneSignal.sendTag("aluno", alunoVal);
                     window.plugins.OneSignal.sendTag("ano", anoVal);
