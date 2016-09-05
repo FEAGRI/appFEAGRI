@@ -34,7 +34,6 @@
             var year = mydate.getFullYear();    
             var idade = (year - ano);
 
-            
             if(usuarioVal !== "0" ){
                 window.plugins.OneSignal.sendTag("usuario", usuario);
                 window.plugins.OneSignal.sendTag("matricula", matricula);
