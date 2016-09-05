@@ -28,7 +28,7 @@
             var usuarioVal = $("#usuario option:selected").attr("value");
             var alunoVal = $("#aluno option:selected").attr("value");
             var anoVal = $("#ano option:selected").attr("value");
-            var matricula = $("#matricula").attr("value");
+            var matricula = $("#matricula").prop("value");
             
             var mydate = new Date();
             var year = mydate.getFullYear();    
