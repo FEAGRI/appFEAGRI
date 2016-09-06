@@ -60,28 +60,9 @@ document.addEventListener("onload", onAppReady, false) ;
 // NOTE: change "dev.LOG" in "init-dev.js" to "true" to enable some console.log
 // messages that can help you debug Cordova app initialization issues.
 
-/**/
-//window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-   
-        var notificationOpenedCallback = function(jsonData) {
-            alert(jsonData.additionalData.title+"\n " +jsonData.message);
-            //alert('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
-        };
-
-        //window.plugins.OneSignal.sendTag("free","livre" );
- 
-        window.plugins.OneSignal.getTags(function(tags) {
-                //alert('Tags Received: ' + JSON.stringify(tags));
-        });
- 
-        // Show an alert box if a notification comes in when the user is in your app.
-        window.plugins.OneSignal.enableInAppAlertNotification(true);
-        window.plugins.OneSignal.enableNotificationsWhenActive(true);
-        window.plugins.OneSignal.enableSound(true);
-        document.addEventListener("app.Ready", register_event_handlers, false);
-/**/
-
 $(document).ready(function(){
+
+    
     $('#protoc_pessoa').change(function(){
         $('#documento').css("display","block");
         $('#documento').empty();
