@@ -29,19 +29,26 @@
 			diasemana="Sábado"
 	}
 		var url = "http://www.feagri.unicamp.br/portal/sistemas-intranet/grade-horarios?salaaula_ativa=S&salaaula_ano=2016&salaaula_anosemestre=2&salaaula_semana="+semana;
+		//var url = "js/sala_aula.json";
 		// busca a URL e cria o array
 		$.getJSON (url, function(data){
-		// vendo o array no console
-		console.log(data);
+		
 		//limpa a div (se vc modificar ela não duplica resultados)	
 		$("#result").empty();
-		// inicio do for no array data
-		// ver resultado console.log(data[i]['Disciplina']);
-			//$("#result").append('<div class="ui-block-a ui-bar-b">Horário</div><div class="ui-block-b ui-bar-b">Sala</div><div class="ui-block-b ui-bar-b">Turma</div><div class="ui-block-d ui-bar-b">Disciplina</div><div class="ui-block-e ui-bar-b">Docente</div>');
 			for (var i = 0; i <data.length; i++) {
-				$( "#result" ).append('<tr><td>'+data[i]['Horario']+'</td><td>'+data[i]['Sala']+' </td><td>'+data[i]['Sigla']+' - '+data[i]['Turma']+'<br/>'+data[i]['Disciplina']+'</td>'+'<td>'+'<img src="http://www.feagri.unicamp.br/portal/'+data[i]['Img']+'"><br/>'+data[i]['Docente']+'</td></tr>');
+				//$( "#result" ).append('<tr><td>'+data[i]['Horario']+'</td><td>'+data[i]['Sala']+' </td><td>'+data[i]['Sigla']+' - '+data[i]['Turma']+'<br/>'+data[i]['Disciplina']+'</td>'+'<td>'+'<img src="http://www.feagri.unicamp.br/portal/'+data[i]['Img']+'"><br/>'+data[i]['Docente']+'</td></tr>');
+		        var listHtml = '<li>';
+		        listHtml += '<div class="h">' + data[i]['Horario'] + '</div>';
+		        listHtml += '<div class="s"><strong>Sala: </strong>' + data[i]['Sala'] + ' | <strong>Turma: </strong>' + data[i]['Turma']  + '</div>';
+		        listHtml += '<div class="di"><strong>' + data[i]['Sigla'] +'</strong> - '+ data[i]['Disciplina'] + '</div>';
+		        listHtml += '<div class="do">' + '<img src="http://www.feagri.unicamp.br/portal/'+data[i]['Img']+'"><span>' + data[i]['Docente'] + '</span></div>';
+		        listHtml += '</li>';
+
+      			$("#result").append(listHtml);
+
+
 			}
-			document.getElementById("dia").innerHTML=diasemana;
+		document.getElementById("diatitle").innerHTML=diasemana;
 	   //append joga os resultados do for dentro da div #result 
 	   //ver um dado unitario use data[i]['Disciplina']
 	   //append só joga na div, vc pode usar dentro do append tags html, select por exemplo
