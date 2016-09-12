@@ -35,6 +35,11 @@ $(document).ready(function(){
             $("#listacontatos li a").click(function(){
             	var j = $(this).attr("href");
             	var k = j.replace('#contatoItem','');
+            	if (data[k].lattes == null){
+            		var l = '#';
+            	} else {
+            		var l = data[k].lattes;
+            	}
 
             	contatoPage += '<div data-role="page" id="contatoItem' + k + '">';
             	contatoPage += '<div data-role="header" align="center" data-position="fixed"><a href="#contato" class="btn-normal">Voltar</a><img src="images/lg_feagri36.png"/></div>';
@@ -49,7 +54,7 @@ $(document).ready(function(){
           		contatoPage += '<p><strong>Telefone: </strong>';
 				contatoPage += '<a href="tel:'+data[k].telefone+'">'+data[k].telefone+'</a></p>';
 				contatoPage += '<p><strong>Orgão: </strong>'+data[k].orgao+'</p>';
-          		contatoPage += '<p><a href="'+data[k].lattes+'" target="_blank" >LATTES</a></p>';
+          		contatoPage += '<p><a href="'+l+'" target="_blank" >LATTES</a></p>';
 				contatoPage += '</div>';
 				contatoPage += '</div></div>';
             	$("body").append(contatoPage);

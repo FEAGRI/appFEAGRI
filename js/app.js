@@ -26,24 +26,24 @@ function onAppReady() {
         var networkState = navigator.connection.type;
 
         var states = {};
-        states[Connection.UNKNOWN]  = 'Unknown connection';
-        states[Connection.ETHERNET] = 'Ethernet connection';
-        states[Connection.WIFI]     = 'WiFi connection';
-        states[Connection.CELL_2G]  = 'Cell 2G connection';
-        states[Connection.CELL_3G]  = 'Cell 3G connection';
-        states[Connection.CELL_4G]  = 'Cell 4G connection';
-        states[Connection.CELL]     = 'Cell generic connection';
-        states[Connection.NONE]     = 'No network connection';
+        states[Connection.UNKNOWN]  = 'Conexão não detectada';
+        states[Connection.ETHERNET] = 'Ethernet conexão';
+        states[Connection.WIFI]     = 'Conexão WiFi';
+        states[Connection.CELL_2G]  = 'Conexão 2G';
+        states[Connection.CELL_3G]  = 'Conexão 3G';
+        states[Connection.CELL_4G]  = 'Conexão 4G';
+        states[Connection.CELL]     = 'Conexão Genérica Celular';
+        states[Connection.NONE]     = 'Nenhuma conexão de rede';
 
         //alert('Connection type: ' + states[networkState]);
 
         document.getElementById("network").innerHTML = states[networkState];
     
         //document.getElementById("cordova").innerHTML = device.cordova;
-        document.getElementById("model").innerHTML = device.model;
-        document.getElementById("platform").innerHTML = device.platform;
-        document.getElementById("version").innerHTML = device.version;
-        document.getElementById("manufacturer").innerHTML = device.manufacturer;
+        //document.getElementById("model").innerHTML = device.model;
+        //document.getElementById("platform").innerHTML = device.platform;
+        //document.getElementById("version").innerHTML = device.version;
+        //document.getElementById("manufacturer").innerHTML = device.manufacturer;
 }
 document.addEventListener("app.Ready", onAppReady, false) ;
 document.addEventListener("deviceready", onAppReady, false) ;
