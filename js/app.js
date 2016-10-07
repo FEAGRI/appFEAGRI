@@ -136,9 +136,12 @@ $(document).ready(function(){
                 window.plugins.OneSignal.sendTag("usuario", usuarioVal);
                 window.plugins.OneSignal.sendTag("matricula", matricula);
                 window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
+                if (usuarioVal == "funcionario" || usuarioVal == "docente" || usuarioVal == "pesquisador"){
+                    window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
+                }
                 if (alunoVal !== "0") {
                     window.plugins.OneSignal.sendTag("aluno", alunoVal);
-                    window.plugins.OneSignal.sendTag("ano", anoVal);
+                    window.plugins.OneSignal.sendTag("ano", ano);
                 } else {
                     if (usuarioVal == 'aluno'){
                         alert("Campo Se Aluno - Escolha, é necessário!");        

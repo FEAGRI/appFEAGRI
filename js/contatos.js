@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 		//var url = "http://www.feagri.unicamp.br/portal/sistemas-intranet/contatos";
 		var url = 'http://www.feagri.unicamp.br/portal/templates/simplesimon/includes/contatos.json';
+		//var url = 'http://www.feagri.unicamp.br/portal/app/contatos.json';
 		
 		var $listacontatos = $("#listacontatos");
 		$.getJSON(url)
