@@ -11,7 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.min.css" />
 
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -25,10 +26,10 @@
     <script type="text/javascript" src="js/contatos.js"></script>
     <script type="text/javascript" src="js/protocolo.js"></script>
     <script type="text/javascript" src="js/weblinks.js"></script>
+    <script type="text/javascript" src="js/circular.js"></script>
 
     <script src="xdk/init-dev.js"></script>
     <!-- normalizes device and document ready events, see README for details -->
-
 
 </head>
 
@@ -41,7 +42,7 @@
         <!-- /header -->
         <ul>
             <li><a href="#graduacao" class="ui-btn ui-icon-calendar ui-btn-icon-left">Graduação</a></li>
-            <li><a href="circular.html" class="ui-btn ui-icon-calendar ui-btn-icon-left">Circular</a></li>
+            <li><a href="#circular" class="ui-btn ui-icon-calendar ui-btn-icon-left">Circular</a></li>
             <li><a href="#posgrad" class="ui-btn ui-icon-grid ui-btn-icon-left">Pós-Graduação</a></li>
             <li><a href="#contato" class="ui-btn ui-icon-bullets ui-btn-icon-left">Contatos</a></li>
             <li><a href="#links" class="ui-btn ui-icon-bullets ui-btn-icon-left">Informações</a></li>
@@ -64,6 +65,47 @@
             <h2 id="diatitle"></h2>
 
             <ul id="result"></ul>
+
+        </div>
+        <!-- /content -->
+
+    </div>
+    <!-- /page -->
+
+    <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="circular">
+        <div data-role="header" align="center" data-position="fixed">
+            <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+            <h3>Horários Circular Interno</h3>
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <form action="#" method="get" accept-charset="utf-8">
+                <div data-role="fieldcontain">
+                    <label for="ci_circular" class="ui-hidden-accessible">Circular</label>
+                    <select name="ci_circular" id="ci_circular" data-native-menu="false" required>
+                        <option>- Selecione Circular -</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+				    </select>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="ci_ponto" class="ui-hidden-accessible">Ponto</label>
+                    <select id="ci_ponto" name="ci_ponto" data-native-menu="false" required>
+                        <option>- Selecione Ponto -</option>
+                        <option value="CBMEG-FEAGRI">CBMEG FEAGRI</option>
+                        <option value="FEAGRI-CCUEC">FEAGRI CCUEC</option>
+                        <option value="FEAGRI-EMBRAPA">FEAGRI EMBRAPA</option>
+                        <option value="FEAGRI-CBMEG">FEAGRI CBMEG</option>
+                        <option value="FEAGRI-GENETICA">FEAGRI GENETICA</option>
+                    </select>
+                </div>
+
+                <a href="#" data-role="button" data-icon="search" class="btn-circular button-ui">Buscar</a>
+
+            </form>
+            <ul id="result-circular" data-role="listview"></ul>
 
         </div>
         <!-- /content -->
