@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+<head>
+
+    <title>FEAGRI</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="cordova.js"></script>
+    <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script type="text/javascript" src="js/networkconnection.js"></script>
+    <script src="js/app.js"></script>
+    <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script type="text/javascript" src="js/circular.js"></script>
+
+    <script src="xdk/init-dev.js"></script>
+    <!-- normalizes device and document ready events, see README for details -->
+
+
+</head>
+
+<body>
+
+    <div data-role="panel" id="appmenu" data-display="overlay" data-position="left" data-theme="a">
+        <div data-role="header" align="left" data-position="fixed" class="white">
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
+        <ul>
+            <li><a href="#graduacao" class="ui-btn ui-icon-calendar ui-btn-icon-left">Graduação</a></li>
+            <li><a href="#" class="ui-btn ui-icon-calendar ui-btn-icon-left ui-btn-active">Circular</a></li>
+            <li><a href="#posgrad" class="ui-btn ui-icon-grid ui-btn-icon-left">Pós-Graduação</a></li>
+            <li><a href="#contato" class="ui-btn ui-icon-bullets ui-btn-icon-left">Contatos</a></li>
+            <li><a href="#links" class="ui-btn ui-icon-bullets ui-btn-icon-left">Informações</a></li>
+            <li><a href="#perfil" class="ui-btn ui-icon-edit ui-btn-icon-left">Perfil Usuário</a></li>
+            <li><a href="https://webmail.feagri.unicamp.br/" target="_blank" class="ui-btn ui-icon-mail ui-btn-icon-left">Webmail</a></li>
+            <li><a href="#sobre" class="ui-btn ui-icon-info ui-btn-icon-left">Sobre</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
+
+    <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="circular">
+        <div data-role="header" align="center" data-position="fixed">
+            <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+            <h3>Horários Circular Interno</h3>
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <form action="#" method="get" accept-charset="utf-8">
+                <div data-role="fieldcontain">
+                    <label for="ci_circular" class="ui-hidden-accessible">Circular</label>
+                    <select name="ci_circular" id="ci_circular" data-native-menu="false" required>
+                        <option value="">- Selecione -</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+				    </select>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="ci_ponto" class="ui-hidden-accessible">Ponto</label>
+                    <select id="ci_ponto" name="ci_ponto" data-native-menu="false" required>
+                        <option value="" selected="selected">- Selecione -</option>
+                        <option value="CBMEG-FEAGRI">CBMEG FEAGRI</option>
+                        <option value="FEAGRI-CCUEC">FEAGRI CCUEC</option>
+                        <option value="FEAGRI-EMBRAPA">FEAGRI EMBRAPA</option>
+                        <option value="FEAGRI-CBMEG">FEAGRI CBMEG</option>
+                        <option value="FEAGRI-GENETICA">FEAGRI GENETICA</option>
+                    </select>
+                </div>
+
+                <a href="#" data-role="button" data-icon="search" class="btn-circular button-ui">Buscar</a>
+
+            </form>
+
+            <ul id="result"></ul>
+        </div>
+        <!-- /content -->
+
+    </div>
+    <!-- /page -->
+
+
+</body>
+
+</html>

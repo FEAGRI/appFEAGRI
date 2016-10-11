@@ -10,171 +10,194 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
-	<link rel="stylesheet" href="css/custom.css"/>
-    
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 
- 
-<script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
-<script type="text/javascript" src="js/networkconnection.js"></script>
-<script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
-<script type="text/javascript" src="js/sala_aula.js"></script>
-<script type="text/javascript" src="js/contatos.js"></script>
-<script type="text/javascript" src="js/protocolo.js"></script>
-<script type="text/javascript" src="js/weblinks.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
-<script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    <script src="cordova.js"></script>
+    <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script type="text/javascript" src="js/networkconnection.js"></script>
+    <script src="js/app.js"></script>
+    <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script type="text/javascript" src="js/sala_aula.js"></script>
+    <script type="text/javascript" src="js/contatos.js"></script>
+    <script type="text/javascript" src="js/protocolo.js"></script>
+    <script type="text/javascript" src="js/weblinks.js"></script>
+
+    <script src="xdk/init-dev.js"></script>
+    <!-- normalizes device and document ready events, see README for details -->
 
 
 </head>
 
 <body>
 
-<div data-role="panel" id="appmenu" data-display="overlay"  data-position="left" data-theme="a">
-	<div data-role="header" align="left" data-position="fixed" class="white">
-		<img src="images/lg_feagri36.png"/>
-	</div><!-- /header -->	
-	<ul>
-		<li><a href="#graduacao" class="ui-btn ui-icon-calendar ui-btn-icon-left">Graduação</a></li>
-		<li><a href="#posgrad" class="ui-btn ui-icon-grid ui-btn-icon-left">Pós-Graduação</a></li>
-		<li><a href="#contato" class="ui-btn ui-icon-bullets ui-btn-icon-left">Contatos</a></li>
-        <li><a href="#links" class="ui-btn ui-icon-bullets ui-btn-icon-left">Informações</a></li>
-        <li><a href="#perfil" class="ui-btn ui-icon-edit ui-btn-icon-left">Perfil Usuário</a></li>
-		<li><a href="https://webmail.feagri.unicamp.br/" target="_blank" class="ui-btn ui-icon-mail ui-btn-icon-left">Webmail</a></li>
-		<li><a href="#sobre" class="ui-btn ui-icon-info ui-btn-icon-left">Sobre</a></li>
-	</ul>
-</div><!-- /panel -->
+    <div data-role="panel" id="appmenu" data-display="overlay" data-position="left" data-theme="a">
+        <div data-role="header" align="left" data-position="fixed" class="white">
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
+        <ul>
+            <li><a href="#graduacao" class="ui-btn ui-icon-calendar ui-btn-icon-left">Graduação</a></li>
+            <li><a href="circular.html" class="ui-btn ui-icon-calendar ui-btn-icon-left">Circular</a></li>
+            <li><a href="#posgrad" class="ui-btn ui-icon-grid ui-btn-icon-left">Pós-Graduação</a></li>
+            <li><a href="#contato" class="ui-btn ui-icon-bullets ui-btn-icon-left">Contatos</a></li>
+            <li><a href="#links" class="ui-btn ui-icon-bullets ui-btn-icon-left">Informações</a></li>
+            <li><a href="#perfil" class="ui-btn ui-icon-edit ui-btn-icon-left">Perfil Usuário</a></li>
+            <li><a href="https://webmail.feagri.unicamp.br/" target="_blank" class="ui-btn ui-icon-mail ui-btn-icon-left">Webmail</a></li>
+            <li><a href="#sobre" class="ui-btn ui-icon-info ui-btn-icon-left">Sobre</a></li>
+        </ul>
+    </div>
+    <!-- /panel -->
 
-<div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="graduacao">
-	<div data-role="header" align="center" data-position="fixed">
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>		
-		<h3>Graduação/Pós-graduação</h3>
-		<img src="images/lg_feagri36.png"/>
-	</div><!-- /header -->
+    <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="graduacao">
+        <div data-role="header" align="center" data-position="fixed">
+            <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+            <h3>Graduação/Pós-graduação</h3>
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
 
         <div data-role="content">
             <h2 id="diatitle"></h2>
-	    
-		    <ul id="result"></ul>
 
-        </div><!-- /content -->
-    
-</div><!-- /page --> 
+            <ul id="result"></ul>
 
-<div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="posgrad">
-	<div data-role="header" align="center" data-position="fixed">
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>		
-		<h3>Pós- Graduação</h3>
-		<img src="images/lg_feagri36.png"/>
-	</div><!-- /header -->
+        </div>
+        <!-- /content -->
 
-	<div data-role="content">
-		<h2>Protocolo de Solicitações</h2>
-		<h3>Sistema de Protoloco Eletrônico - Consulta Solicitações</h3>
-		<form action="#" method="get" accept-charset="utf-8">
-			<div data-role="fieldcontain" id="solicitante">
-				<label for="solicitante" class="ui-hidden-accessible">Escolha</label>
-				<select name="protoc_pessoa" id="protoc_pessoa" data-native-menu="false" required>
+    </div>
+    <!-- /page -->
+
+    <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="posgrad">
+        <div data-role="header" align="center" data-position="fixed">
+            <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+            <h3>Pós- Graduação</h3>
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <h2>Protocolo de Solicitações</h2>
+            <h3>Sistema de Protoloco Eletrônico - Consulta Solicitações</h3>
+            <form action="#" method="get" accept-charset="utf-8">
+                <div data-role="fieldcontain" id="solicitante">
+                    <label for="solicitante" class="ui-hidden-accessible">Escolha</label>
+                    <select name="protoc_pessoa" id="protoc_pessoa" data-native-menu="false" required>
 					<option value="">Solicitante</option>
 					<option value="0">Alunos</option>
 					<option value="1">Funcionários</option>
 					<option value="2">Outros</option>
 				</select>
-			</div>			
-			<div data-role="fieldcontain" id="documento"></div>
-			<div data-role="fieldcontain">
-				<label for="protocolo" class="ui-hidden-accessible">Protocolo Número</label>
-				<input type="number" name="protoc_num" id="protoc_num" placeholder="Protocolo Número" required/>
- 			</div>
-			<a href="#" data-role="button" data-icon="search" class="button-ui">Buscar</a>
-			<div id="resultprotoc"></div>
-		</form>
-		
-    </div><!-- /content -->
-    
-</div><!-- /page --> 
-	
-<div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="contato" data-dom-cache="false">
-	<div data-role="header" align="center" data-position="fixed">
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>		
-		<h3>Contatos</h3>
-		<img src="images/lg_feagri36.png"/>
-	</div><!-- /header -->
-	<div data-role="content" class="ui-content" id="listacontatos"></div><!-- /content -->
-</div><!-- /page Contatos --> 
+                </div>
+                <div data-role="fieldcontain" id="documento"></div>
+                <div data-role="fieldcontain">
+                    <label for="protocolo" class="ui-hidden-accessible">Protocolo Número</label>
+                    <input type="number" name="protoc_num" id="protoc_num" placeholder="Protocolo Número" required/>
+                </div>
+                <a href="#" data-role="button" data-icon="search" class="button-ui">Buscar</a>
+                <div id="resultprotoc"></div>
+            </form>
 
-<div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="links" data-dom-cache="false">
-	<div data-role="header" align="center" data-position="fixed">
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>		
-		<h3>Informações</h3>
-		<img src="images/lg_feagri36.png"/>
-	</div><!-- /header -->
-	<div data-role="content" class="ui-content" id="weblinks"></div><!-- /content -->
-</div><!-- /page Informações--> 
+        </div>
+        <!-- /content -->
 
-<div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="perfil">
-	<div data-role="header" align="center" data-position="fixed">
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>		
-		<h3>Perfil Usuário</h3>
-		<img src="images/lg_feagri36.png"/>
-	</div><!-- /header -->
+    </div>
+    <!-- /page -->
 
-	<div data-role="content" class="ui-content"></div><!-- /content -->
-	<div data-role="content">
-		<strong>Tipo de conexão</strong>: <span id="network"></span>
-			
-		<h2>Atualize seus Dados</h2>	
-		<h3>Esses dados serão necessários para lhes enviar Notificações pelas Secretarias da Faculdade</h3>	
-		<div data-role="fieldcontain">
-		<label for="usuario-matricula" class="ui-hidden-accessible">Matrícula:</label>
-		<input type="number" name="matricula" id="matricula" placeholder="Número: RA ou Matrícula" required>
-		</div>	
-		<div data-role="fieldcontain">
-		<label for="usuarios" class="ui-hidden-accessible">Tipo de Usuário:</label>
-      	<select id="usuario" required>
+    <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="contato" data-dom-cache="false">
+        <div data-role="header" align="center" data-position="fixed">
+            <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+            <h3>Contatos</h3>
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="ui-content" id="listacontatos"></div>
+        <!-- /content -->
+    </div>
+    <!-- /page Contatos -->
+
+    <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="links" data-dom-cache="false">
+        <div data-role="header" align="center" data-position="fixed">
+            <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+            <h3>Informações</h3>
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
+        <div data-role="content" class="ui-content" id="weblinks"></div>
+        <!-- /content -->
+    </div>
+    <!-- /page Informações-->
+
+    <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="perfil">
+        <div data-role="header" align="center" data-position="fixed">
+            <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+            <h3>Perfil Usuário</h3>
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
+
+        <div data-role="content" class="ui-content"></div>
+        <!-- /content -->
+        <div data-role="content">
+            <strong>Tipo de conexão</strong>: <span id="network"></span>
+
+            <h2>Atualize seus Dados</h2>
+            <h3>Esses dados serão necessários para lhes enviar Notificações pelas Secretarias da Faculdade</h3>
+            <div data-role="fieldcontain">
+                <label for="usuario-matricula" class="ui-hidden-accessible">Matrícula:</label>
+                <input type="number" name="matricula" id="matricula" placeholder="Número: RA ou Matrícula" required>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="usuarios" class="ui-hidden-accessible">Tipo de Usuário:</label>
+                <select id="usuario" required>
            <option value="0">Tipo de Usuário</option>
 		   <option value="aluno">Aluno</option>
 		   <option value="funcionario">Funcionário</option>
 		   <option value="docente">Docente</option>
 		   <option value="pesquisador">Pesquisador</option>
 		</select>
-		</div>	
-		<div data-role="fieldcontain" id="fieldAluno">
-		<label for="alunos" class="ui-hidden-accessible">Usuário Tipo Aluno:</label>
-		<select id="aluno">
+            </div>
+            <div data-role="fieldcontain" id="fieldAluno">
+                <label for="alunos" class="ui-hidden-accessible">Usuário Tipo Aluno:</label>
+                <select id="aluno">
      		<option value="0">Se Aluno - Escolha</option>
   			<option value="graduacao">Graduação</option>
   			<option value="pos-graduacao-mestrado">Pós-Graduação - Mestrado</option>
   			<option value="pos-graduacao-doutorado">Pós-Graduação - Doutorado</option>
 		</select>
-		</div>
-		<div data-role="fieldcontain" id="fieldAno">
-		<label for="nascimento" class="ui-hidden-accessible">:</label>
-      	<select id="ano">
+            </div>
+            <div data-role="fieldcontain" id="fieldAno">
+                <label for="nascimento" class="ui-hidden-accessible">:</label>
+                <select id="ano">
 
 		</select>
-		</div>	
-         <button id="btn_push">Enviar</button>
+            </div>
+            <button id="btn_push">Enviar</button>
 
-         <div id="dadosuser"></div>			
-        </div><!-- /content -->	
+            <div id="dadosuser"></div>
+        </div>
+        <!-- /content -->
 
-</div><!-- /page --> 
-<div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="sobre">
-	<div data-role="header" align="center" data-position="fixed">
-		<a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>		
-		<h3>Sobre</h3>
-		<img src="images/lg_feagri36.png"/>
-	</div><!-- /header -->
-	<div data-role="content">
- 		<p>Este é um aplicativo que tem por objetivo disponibilizar serviços da Faculdade de Engenharia Agrícola/Unicamp, que possam facilitar o dia a dia dos usuários dessa comunidade.</p>
-        <p>O aplicativo pode ganhar novos serviços à medida que aumente a demanda de informações que sejam úteis a serem disponibilizados neste App Mobile.</p>
-        <span>@2016 FEAGRI/UNICAMP - informatica@feagri.unicamp.br</span>		
-	</div>
-</div><!-- /page Sobre --> 
-	
+    </div>
+    <!-- /page -->
+    <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="sobre">
+        <div data-role="header" align="center" data-position="fixed">
+            <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+            <h3>Sobre</h3>
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
+        <div data-role="content">
+            <p>Este é um aplicativo que tem por objetivo disponibilizar serviços da Faculdade de Engenharia Agrícola/Unicamp, que possam facilitar o dia a dia dos usuários dessa comunidade.</p>
+            <p>O aplicativo pode ganhar novos serviços à medida que aumente a demanda de informações que sejam úteis a serem disponibilizados neste App Mobile.</p>
+            <span>@2016 FEAGRI/UNICAMP - informatica@feagri.unicamp.br</span>
+        </div>
+    </div>
+    <!-- /page Sobre -->
+
 </body>
 
 </html>

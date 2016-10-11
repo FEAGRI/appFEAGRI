@@ -1,0 +1,163 @@
+[{
+    "Dia": "5sexta",
+    "Horario": "08:00 até 10:00",
+    "Sala": "EA23",
+    "Sigla": "FA474",
+    "Disciplina": "Dinâmica de Sistemas ",
+    "Turma": "A",
+    "Docente": "Angel Pontin Garcia",
+    "Img": "images/fotosservidores/546/_thumb1/angelgarcia2.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "08:00 até 12:00",
+    "Sala": "EA05",
+    "Sigla": "FA879",
+    "Disciplina": "Tecnologia de Processos Pós-Colheita II",
+    "Turma": "A",
+    "Docente": "Rafael Augustus de Oliveira",
+    "Img": "images/fotosservidores/519/_thumb1/augustus.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "09:00 até 12:00",
+    "Sala": "EA11",
+    "Sigla": "AP631",
+    "Disciplina": "Secagem Aplicada a Produtos Agrícolas ",
+    "Turma": "A",
+    "Docente": "Rafael Augustus de Oliveira",
+    "Img": "images/fotosservidores/519/_thumb1/augustus.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "09:00 até 12:00",
+    "Sala": "EA02",
+    "Sigla": "AP333",
+    "Disciplina": "Madeira: Tecnologia e Aplicações ",
+    "Turma": "A",
+    "Docente": "Julio Soriano",
+    "Img": "images/fotosservidores/506/_thumb1/juliosoriano.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "09:00 até 12:00",
+    "Sala": "EA13",
+    "Sigla": "FA665",
+    "Disciplina": "Geotecnologias I ",
+    "Turma": "A",
+    "Docente": "Jansle Vieira Rocha",
+    "Img": "images/fotosservidores/526/_thumb1/janslerocha.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "09:00 até 12:00",
+    "Sala": "EA25",
+    "Sigla": "AP368",
+    "Disciplina": "Oferta de Energia Elétrica ao Meio Rural ",
+    "Turma": "A",
+    "Docente": "Luiz Antonio Rossi",
+    "Img": "images/fotosservidores/515/_thumb1/rossi.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "09:00 até 12:00",
+    "Sala": "EA16",
+    "Sigla": "AP532",
+    "Disciplina": "Preparação de Dados para Mineração de Dados ",
+    "Turma": "A",
+    "Docente": "Stanley Robson de Medeiros Oliveira",
+    "Img": "images/fotosservidores/527/_thumb1/stanleyoliveira.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "09:00 até 12:00",
+    "Sala": "EA07",
+    "Sigla": "AP183",
+    "Disciplina": "Estudo Dirigido em Projeto de Máquinas e Equipame",
+    "Turma": "A",
+    "Docente": "Barbara Teruel Mederos",
+    "Img": "images/fotosservidores/704/_thumb1/barbarat.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "10:00 até 12:00",
+    "Sala": "EA04",
+    "Sigla": "AM030",
+    "Disciplina": "Técnicas e Organização de Apresentações em Público",
+    "Turma": "A",
+    "Docente": "Mauro Jose Andrade Tereso",
+    "Img": "images/fotosservidores/521/_thumb1/mauro.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "10:00 até 13:00",
+    "Sala": "EA03",
+    "Sigla": "FA470",
+    "Disciplina": "Dinâmica de Corpos Rígidos ",
+    "Turma": "C",
+    "Docente": "Tiago Henrique Machado",
+    "Img": "images/fotosservidores/841/_thumb1/tiago.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "13:00 até 16:00",
+    "Sala": "EA08",
+    "Sigla": "AP318",
+    "Disciplina": "Conforto Térmico na Produção Animal ",
+    "Turma": "A",
+    "Docente": "Daniella Jorge de Moura",
+    "Img": "images/fotosservidores/536/_thumb1/daniellamoura.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "14:00 até 16:00",
+    "Sala": "EA04",
+    "Sigla": "FA682",
+    "Disciplina": "Modelagem Estrutural Aplicada ",
+    "Turma": "A",
+    "Docente": "Roberto Funes Abrahao",
+    "Img": "images/fotosservidores/551/_thumb1/roberto.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "14:00 até 16:00",
+    "Sala": "EA06",
+    "Sigla": "FA074",
+    "Disciplina": "Tecnologia em Agricultura de Precisão ",
+    "Turma": "A",
+    "Docente": "Lucas Rios do Amaral",
+    "Img": "images/fotosservidores/732/_thumb1/lucas-rios.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "14:00 até 17:00",
+    "Sala": "EA02",
+    "Sigla": "AP229",
+    "Disciplina": "Engenharia de Irrigação II: Avaliação de Sistemas ",
+    "Turma": "A",
+    "Docente": "Edson Eiji Matsura",
+    "Img": "images/fotosservidores/500/_thumb1/matsura.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "14:00 até 17:00",
+    "Sala": "EA23",
+    "Sigla": "FA071",
+    "Disciplina": "Sociologia e Extensão Rural ",
+    "Turma": "A",
+    "Docente": "Ariovaldo José da Silva",
+    "Img": "images/fotosservidores/520/_thumb1/ariovaldosilva.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "16:00 até 18:00",
+    "Sala": "EA04",
+    "Sigla": "FA679",
+    "Disciplina": "Tecnologia de Processos Pós-Colheita I ",
+    "Turma": "A",
+    "Docente": "Franciane Colares Souza Usberti",
+    "Img": "images/fotosservidores/625/_thumb1/francian.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "16:00 até 18:00",
+    "Sala": "EA01",
+    "Sigla": "FA425",
+    "Disciplina": "Instrumentação Básica ",
+    "Turma": "A",
+    "Docente": "Barbara Teruel Mederos",
+    "Img": "images/fotosservidores/704/_thumb1/barbarat.jpg"
+}, {
+    "Dia": "5sexta",
+    "Horario": "16:00 até 19:00",
+    "Sala": "EA08",
+    "Sigla": "AP398",
+    "Disciplina": "Qualidade do Ar e Avaliação de Poluentes Aéreos e ",
+    "Turma": "A",
+    "Docente": "Daniella Jorge de Moura",
+    "Img": "images/fotosservidores/536/_thumb1/daniellamoura.jpg"
+}]
