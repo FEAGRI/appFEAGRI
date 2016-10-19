@@ -27,6 +27,7 @@
     <script type="text/javascript" src="js/protocolo.js"></script>
     <script type="text/javascript" src="js/weblinks.js"></script>
     <script type="text/javascript" src="js/circular.js"></script>
+    <script type="text/javascript" src="js/cardapio.js"></script>
 
     <script src="xdk/init-dev.js"></script>
     <!-- normalizes device and document ready events, see README for details -->
@@ -41,14 +42,15 @@
         </div>
         <!-- /header -->
         <ul>
-            <li><a href="#graduacao" class="ui-btn ui-icon-calendar ui-btn-icon-left">Graduação</a></li>
-            <li><a href="#circular" class="ui-btn ui-icon-calendar ui-btn-icon-left">Circular</a></li>
-            <li><a href="#posgrad" class="ui-btn ui-icon-grid ui-btn-icon-left">Pós-Graduação</a></li>
-            <li><a href="#contato" class="ui-btn ui-icon-bullets ui-btn-icon-left">Contatos</a></li>
-            <li><a href="#links" class="ui-btn ui-icon-bullets ui-btn-icon-left">Informações</a></li>
-            <li><a href="#perfil" class="ui-btn ui-icon-edit ui-btn-icon-left">Perfil Usuário</a></li>
-            <li><a href="https://webmail.feagri.unicamp.br/" target="_blank" class="ui-btn ui-icon-mail ui-btn-icon-left">Webmail</a></li>
-            <li><a href="#sobre" class="ui-btn ui-icon-info ui-btn-icon-left">Sobre</a></li>
+            <li><a href="#graduacao" class="ui-btn"><i class="fa fa-clock-o fa-lg"></i> Grade Horária</a></li>
+            <li><a href="#posgrad" class="ui-btn"><i class="fa fa-pencil fa-lg"></i> Protocolo Eletrônico</a></li>
+            <li><a href="#circular" class="ui-btn"><i class="fa fa-bus fa-lg"></i> Circular Interno</a></li>
+            <li><a href="#contato" class="ui-btn"><i class="fa fa-phone fa-lg"></i> Contatos</a></li>
+            <li><a href="#links" class="ui-btn"><i class="fa fa-link fa-lg"></i> Informações Úteis</a></li>
+            <li><a href="https://webmail.feagri.unicamp.br/" target="_blank" class="ui-btn"><i class="fa fa-envelope-o fa-lg"></i> Webmail</a></li>
+            <li><a href="#cardapio" class="ui-btn"><i class="fa fa-coffee fa-lg"></i> Restaurante/Cardápio</a></li>
+            <li><a href="#perfil" class="ui-btn"><i class="fa fa-user fa-lg"></i> Perfil do Usuário</a></li>
+            <li><a href="#sobre" class="ui-btn"><i class="fa fa-info fa-lg"></i> Sobre</a></li>
         </ul>
     </div>
     <!-- /panel -->
@@ -56,7 +58,9 @@
     <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="graduacao">
         <div data-role="header" align="center" data-position="fixed">
             <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
-            <h3>Graduação/Pós-graduação</h3>
+            <h3 class="two-ln">Grade Horária
+                <span class="small">Graduação/Pós-graduação</span>
+            </h3>
             <img src="images/lg_feagri36.png" />
         </div>
         <!-- /header -->
@@ -116,14 +120,14 @@
     <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="posgrad">
         <div data-role="header" align="center" data-position="fixed">
             <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
-            <h3>Pós- Graduação</h3>
+            <h3 class="two-ln">Protocolo Eletrônico
+                <span class="small">Pós-graduação</span>
+            </h3>
             <img src="images/lg_feagri36.png" />
         </div>
         <!-- /header -->
 
         <div data-role="content">
-            <h2>Protocolo de Solicitações</h2>
-            <h3>Sistema de Protoloco Eletrônico - Consulta Solicitações</h3>
             <form action="#" method="get" accept-charset="utf-8">
                 <div data-role="fieldcontain" id="solicitante">
                     <label for="solicitante" class="ui-hidden-accessible">Escolha</label>
@@ -164,7 +168,7 @@
     <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="links" data-dom-cache="false">
         <div data-role="header" align="center" data-position="fixed">
             <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
-            <h3>Informações</h3>
+            <h3>Informações Úteis</h3>
             <img src="images/lg_feagri36.png" />
         </div>
         <!-- /header -->
@@ -173,10 +177,28 @@
     </div>
     <!-- /page Informações-->
 
+    <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="cardapio">
+        <div data-role="header" align="center" data-position="fixed">
+            <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
+            <h3>Restaurante/Cardápio</h3>
+            <img src="images/lg_feagri36.png" />
+        </div>
+        <!-- /header -->
+
+        <div data-role="content">
+            <span class="small">*CARDÁPIO SUJEITO A ALTERAÇÕES</span>
+            <div class="cardapio"></div>
+        </div>
+        <!-- /content -->
+
+    </div>
+    <!-- /page -->
+
+
     <div data-role="page" data-title="Faculdade de Engenharia Agrícola" id="perfil">
         <div data-role="header" align="center" data-position="fixed">
             <a href="#appmenu" class="ui-btn ui-icon-bars ui-btn-icon-right ui-btn-icon-notext">Menu</a>
-            <h3>Perfil Usuário</h3>
+            <h3>Perfil do Usuário</h3>
             <img src="images/lg_feagri36.png" />
         </div>
         <!-- /header -->

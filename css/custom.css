@@ -133,6 +133,16 @@ div[data-role=page]>div[data-role=header] img {
     margin: 0;
 }
 
+.ui-header .two-ln {
+    padding: 3px 0;
+}
+
+span.small {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+}
+
 
 /*Menu Button*/
 
@@ -192,7 +202,11 @@ div[data-role='header'] a.ui-btn:focus {
     border: 0;
     text-align: left;
     color: rgb(100, 100, 100);
-    padding: 20px 40px;
+    padding: 20px;
+}
+
+#appmenu ul li a i {
+    padding-right: 10px;
 }
 
 #appmenu ul li a.ui-btn-active {
@@ -234,6 +248,56 @@ div[data-role='header'] a.ui-btn:focus {
 
 .circular-pne {
     flex-basis: 30px;
+}
+
+
+/* Cardápio */
+
+#cardapio .cardapio {
+    margin: 0;
+    padding: 0;
+}
+
+#cardapio .cardapio .cafe,
+#cardapio .cardapio .almoco,
+#cardapio .cardapio .almocoVeg,
+#cardapio .cardapio .jantar,
+#cardapio .cardapio .jantarVeg {
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px;
+    box-shadow: 2px 2px 1px #eee;
+    border-left: 5px solid gray;
+}
+
+#cardapio .cardapio .cafe h3,
+#cardapio .cardapio .cafe p,
+#cardapio .cardapio .almoco h3,
+#cardapio .cardapio .almoco p,
+#cardapio .cardapio .almocoVeg h3,
+#cardapio .cardapio .almocoVeg p,
+#cardapio .cardapio .jantar h3,
+#cardapio .cardapio .jantar p,
+#cardapio .cardapio .jantarVeg h3,
+#cardapio .cardapio .jantarVeg p {
+    margin: 0;
+    padding: 0;
+}
+
+#cardapio .cardapio .cafe h3,
+#cardapio .cardapio .almoco h3,
+#cardapio .cardapio .almocoVeg h3,
+#cardapio .cardapio .jantar h3,
+#cardapio .cardapio .jantarVeg h3 {
+    padding-bottom: 5px;
+}
+
+#cardapio .cardapio .cafe p,
+#cardapio .cardapio .almoco p,
+#cardapio .cardapio .almocoVeg p,
+#cardapio .cardapio .jantar p,
+#cardapio .cardapio .jantarVeg p {
+    font-size: 13px;
 }
 
 
