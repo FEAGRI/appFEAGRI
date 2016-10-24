@@ -300,6 +300,10 @@ div[data-role='header'] a.ui-btn:focus {
     font-size: 13px;
 }
 
+h2.diacardapio {
+    text-align: center;
+}
+
 
 /* Alerta */
 

@@ -1,7 +1,29 @@
 $(document).ready(function() {
+        switch (new Date().getDay()) {
+            case 0:
+                diasemana = "Domingo"
+                break;
+            case 1:
+                diasemana = "Segunda-feira"
+                break;
+            case 2:
+                diasemana = "Terça-feira"
+                break;
+            case 3:
+                diasemana = "Quarta-feira"
+                break;
+            case 4:
+                diasemana = "Quinta-feira"
+                break;
+            case 5:
+                diasemana = "Sexta-feira"
+                break;
+            case 6:
+                diasemana = "Sábado"
+        }
 
-    var url = 'http://www.feagri.unicamp.br/portal/templates/simplesimon/includes/lercardapio.html';
-    //var url = 'js/cardapio.json';
+    //var url = 'http://www.feagri.unicamp.br/portal/templates/simplesimon/includes/lercardapio.html';
+    var url = 'http://www.feagri.unicamp.br/portal/templates/simplesimon/includes/cardapio.json';
 
     var $cardapio = $(".cardapio");
 
@@ -30,6 +52,7 @@ $(document).ready(function() {
             jantarVeg += '</p></div>';
 
             $cardapio.append(cafe + almoco + almocoVeg + jantar + jantarVeg);
+            document.getElementById("diacardapio").innerHTML = diasemana;
 
         })
         .fail(function() {

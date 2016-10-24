@@ -29,7 +29,7 @@ var url = "http://www.feagri.unicamp.br/portal/templates/simplesimon/includes/we
 	})
     
 	.fail(function(msg, textStatus, erro){
-		$weblinks.html("Não foi possível exibir as informações(links)...");
+		$weblinks.html('<p class="alerta">Não foi possível exibir as informações(links)...</p>');
         //alert(textStatus);
 		//alert(msg);
 		//alert(erro);

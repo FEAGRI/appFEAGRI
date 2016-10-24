@@ -28,8 +28,8 @@
 	            semana = "6sábado";
 	            diasemana = "Sábado"
 	    }
-	    //var url = "http://www.feagri.unicamp.br/portal/sistemas-intranet/grade-horarios?salaaula_ativa=S&salaaula_ano=2016&salaaula_anosemestre=2&salaaula_semana=" + semana;
-	    var url = "js/sala_aula.json";
+	    var url = "http://www.feagri.unicamp.br/portal/sistemas-intranet/grade-horarios?salaaula_ativa=S&salaaula_ano=2016&salaaula_anosemestre=2&salaaula_semana=" + semana;
+	    //var url = "js/sala_aula.json";
 	    // busca a URL e cria o array
 	    $.getJSON(url, function(data) {
 
