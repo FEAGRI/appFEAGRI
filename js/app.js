@@ -113,30 +113,24 @@ $(document).ready(function() {
     // Show an alert box if a notification comes in when the user is in your app.
 
     $("button").on("click", function(e) {
-        e.preventDefault();
-        var usuario = $("#usuario option:selected").text();
-        var aluno = $("#aluno option:selected").text();
-        var ano = $("#ano option:selected").text();
+            e.preventDefault();
+            var usuario = $("#usuario option:selected").text();
+            var aluno = $("#aluno option:selected").text();
+            var ano = $("#ano option:selected").text();
 
-        var usuarioVal = $("#usuario option:selected").attr("value");
-        var alunoVal = $("#aluno option:selected").attr("value");
-        var anoVal = $("#ano option:selected").attr("value");
-        var matricula = $("#matricula").prop("value");
+            var usuarioVal = $("#usuario option:selected").attr("value");
+            var alunoVal = $("#aluno option:selected").attr("value");
+            var anoVal = $("#ano option:selected").attr("value");
+            var matricula = $("#matricula").prop("value");
 
-        var mydate = new Date();
-        var year = mydate.getFullYear();
-        var idade = (year - ano);
+            var mydate = new Date();
+            var year = mydate.getFullYear();
+            var idade = (year - ano);
 
-        if (usuarioVal !== "0") {
-            window.plugins.OneSignal.sendTag("usuario", usuarioVal);
-            window.plugins.OneSignal.sendTag("matricula", matricula);
-            window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
-            if (alunoVal !== "0") {
-                window.plugins.OneSignal.sendTag("aluno", alunoVal);
-                window.plugins.OneSignal.sendTag("ano", anoVal);
-                var mydate = new Date();
-                var year = mydate.getFullYear();
-                var idade = (year - ano);
+            if (usuarioVal !== "0") {
+                window.plugins.OneSignal.sendTag("usuario", usuarioVal);
+                window.plugins.OneSignal.sendTag("matricula", matricula);
+                window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
 
                 if (usuarioVal !== "0") {
                     window.plugins.OneSignal.sendTag("usuario", usuarioVal);
@@ -175,6 +169,6 @@ $(document).ready(function() {
             } else {
                 alert("Campo usuário é necessário!");
             }
-        }
+      
     });
 });
