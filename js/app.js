@@ -113,66 +113,63 @@ $(document).ready(function() {
     // Show an alert box if a notification comes in when the user is in your app.
 
     $("button").on("click", function(e) {
-        e.preventDefault();
-        var usuario = $("#usuario option:selected").text();
-        var aluno = $("#aluno option:selected").text();
-        var ano = $("#ano option:selected").text();
 
-        var usuarioVal = $("#usuario option:selected").attr("value");
-        var alunoVal = $("#aluno option:selected").attr("value");
-        var anoVal = $("#ano option:selected").attr("value");
-        var matricula = $("#matricula").prop("value");
+            e.preventDefault();
+            var usuario = $("#usuario option:selected").text();
+            var aluno = $("#aluno option:selected").text();
+            var ano = $("#ano option:selected").text();
 
-        var mydate = new Date();
-        var year = mydate.getFullYear();
-        var idade = (year - ano);
+            var usuarioVal = $("#usuario option:selected").attr("value");
+            var alunoVal = $("#aluno option:selected").attr("value");
+            var anoVal = $("#ano option:selected").attr("value");
+            var matricula = $("#matricula").prop("value");
 
-        if (usuarioVal !== "0") {
-            window.plugins.OneSignal.sendTag("usuario", usuarioVal);
-            window.plugins.OneSignal.sendTag("matricula", matricula);
-            window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
-            if (alunoVal !== "0") {
-                window.plugins.OneSignal.sendTag("aluno", alunoVal);
-                window.plugins.OneSignal.sendTag("ano", anoVal);
+            var mydate = new Date();
+            var year = mydate.getFullYear();
+            var idade = (year - ano);
 
-                if (usuarioVal !== "0") {
-                    window.plugins.OneSignal.sendTag("usuario", usuarioVal);
-                    window.plugins.OneSignal.sendTag("matricula", matricula);
-                    window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
-                    if (usuarioVal == "funcionario" || usuarioVal == "docente" || usuarioVal == "pesquisador") {
-                        window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
-                    }
-                    if (alunoVal !== "0") {
-                        window.plugins.OneSignal.sendTag("aluno", alunoVal);
-                        window.plugins.OneSignal.sendTag("ano", ano);
-                    } else {
-                        if (usuarioVal == 'aluno') {
-                            alert("Campo Se Aluno - Escolha, é necessário!");
-                            alert("Campo Ano de Ingresso, é necessário!");
-
-                        }
-                    }
-                    var resHtml = '<div> Matricula: ' + matricula + '</div>';
-                    resHtml += '<div> Usuário ' + usuario + '</div>';
-                    resHtml += '<div> Tipo de Aluno: ' + aluno + '</div>';
-                    resHtml += '<div> Ano de ingresso: ' + ano + '</div>';
-                    $("#dadosuser").html(resHtml);
-                } else {
-                    if (usuarioVal == 'aluno') {
-                        alert("Campo Se Aluno - Escolha, é necessário!");
-                        alert("Campo Ano de Ingresso, é necessário!");
-
-                    }
-                }
+            if (usuarioVal !== "0") { // Se for algum usuário....
+                                      // envia as tags usuário e matrícula
+                                      // deleta aluno e ano  
+                window.plugins.OneSignal.sendTag("usuario", usuarioVal);  
+                window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
+                                      // mostra somente Matrícula e o Usuário  
                 var resHtml = '<div> Matricula: ' + matricula + '</div>';
                 resHtml += '<div> Usuário ' + usuario + '</div>';
-                resHtml += '<div> Tipo de Aluno: ' + aluno + '</div>';
-                resHtml += '<div> Ano de ingresso: ' + ano + '</div>';
                 $("#dadosuser").html(resHtml);
-            } 
-			
-        } else {
+
+                if (alunoVal !== "0" && usuarioVal == 'aluno') { // Se for 
+                        window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
+                        window.plugins.OneSignal.sendTag("aluno", alunoVal);
+                        window.plugins.OneSignal.sendTag("ano", ano);
+
+                        var resHtml = '<div> Matricula: ' + matricula + '</div>';
+                        resHtml += '<div> Usuário ' + usuario + '</div>';
+                        resHtml += '<div> Tipo de Aluno: ' + aluno + '</div>';
+                        resHtml += '<div> Ano de ingresso: ' + ano + '</div>';
+                        $("#dadosuser").html(resHtml);
+
+                        if (usuarioVal == 'aluno' && alunoVal !== "0" && anoVal == "0") {
+                            alert("Campo Ano de Ingresso, é necessário!");
+                        }
+
+                } else {
+                        if (usuarioVal == 'aluno' && alunoVal == "0") {
+                            alert("Campo Se Aluno - Escolha, é necessário!");
+                        } else if (usuarioVal == 'aluno' && alunoVal !== "0" && anoVal == "0") {
+                            alert("Campo Ano de Ingresso, é necessário!");
+                        }
+                }                
+                
+                if (matricula == "") {
+                    alert("Campo matrícula é necessário!");
+                } else{
+                    window.plugins.OneSignal.sendTag("matricula", matricula);
+                }
+
+            } else {
                 alert("Campo usuário é necessário!");
-        }
+            }
+
     });
 });
