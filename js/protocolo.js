@@ -56,11 +56,18 @@ $(document).ready(function(){
 				anos = datas.substring(0,4);
 				datas=dias+mess+anos;
 				
-				$( "#resultprotoc" ).append('<div id="'+data[i]['id']+'"><button type="button" class="ui-btn ui-shadow ui-corner-all">'+dataatual+'</button><div style="display:none" class="protocoloa">'+'<div><b>Data Envio/Retorno:</b> '+ dataatual+'</div>'+'<div><b>Status:</b> '+ statustext+'</div>'+'<div><b>Local:</b> '+ data[i]['local']+'</div>'+'<div><b>Descrição:</b> '+data[i]['descricao']+'</div>'+'<div><b>Data Solicitação:</b> '+datas+'</div>'+'<div><b>Serviço Solicitado:</b> '+data[i]['servico']+'</div>'+'<div><b>Solicitante:</b> '+data[i]['nome']+'</div>'+'</div></div>');
+				if (data[i]['anexo'] != ''){
+					anexo = '<a href="http://www.feagri.unicamp.br/portal/'+data[i]['anexo']+'" target="_blank">Link</a>';
+				} else{
+					anexo = '';
+				}
+				
+				
+				$( "#resultprotoc" ).append('<div id="'+data[i]['id']+'"><button type="button" class="ui-btn ui-shadow ui-corner-all">'+dataatual+'</button><div style="display:none" class="protocoloa">'+'<div><b>Data Envio/Retorno:</b> '+ dataatual+'</div>'+'<div><b>Status:</b> '+ statustext+'</div>'+'<div><b>Local:</b> '+ data[i]['local']+'</div>'+'<div><b>Descrição:</b> '+data[i]['descricao']+'</div>'+'<div><b>Anexo:</b> '+anexo+'</div>'+'<div><b>Data Solicitação:</b> '+datas+'</div>'+'<div><b>Serviço Solicitado:</b> '+data[i]['servico']+'</div>'+'<div><b>Solicitante:</b> '+data[i]['nome']+'</div>'+'</div></div>');
 			}
 		})
 		.fail(function(msg, textStatus, erro){
-			document.getElementById("resultprotoc").innerHTML="não foi possível exibir o resultado...";            
+			document.getElementById("resultprotoc").innerHTML="<p class='alerta'>não foi possível exibir o resultado...</p>";            
 		});
 	});
 	$(document).on('click', '#resultprotoc div', function() {
