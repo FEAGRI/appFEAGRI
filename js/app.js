@@ -134,9 +134,6 @@ $(document).ready(function() {
             if (alunoVal !== "0") {
                 window.plugins.OneSignal.sendTag("aluno", alunoVal);
                 window.plugins.OneSignal.sendTag("ano", anoVal);
-                var mydate = new Date();
-                var year = mydate.getFullYear();
-                var idade = (year - ano);
 
                 if (usuarioVal !== "0") {
                     window.plugins.OneSignal.sendTag("usuario", usuarioVal);
@@ -172,9 +169,10 @@ $(document).ready(function() {
                 resHtml += '<div> Tipo de Aluno: ' + aluno + '</div>';
                 resHtml += '<div> Ano de ingresso: ' + ano + '</div>';
                 $("#dadosuser").html(resHtml);
-            } else {
+            } 
+			
+        } else {
                 alert("Campo usuário é necessário!");
-            }
         }
     });
 });
