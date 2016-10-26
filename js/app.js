@@ -138,37 +138,42 @@ $(document).ready(function() {
                 resHtml += '<div> Usuário ' + usuario + '</div>';
                 $("#dadosuser").html(resHtml);
 
-                if (alunoVal !== "0" && usuarioVal == 'aluno') { // Se for 
-                        window.plugins.OneSignal.deleteTags(["aluno", "ano"]);
+                if (alunoVal !== "0" && usuarioVal == 'aluno') { // Se for Aluno
+                        window.plugins.OneSignal.deleteTags(["aluno", "ano"]); //deleta novamente aluno e ano
                         window.plugins.OneSignal.sendTag("aluno", alunoVal);
                         window.plugins.OneSignal.sendTag("ano", ano);
 
-                        var resHtml = '<div> Matricula: ' + matricula + '</div>';
+                        var resHtml = '<div> Matricula: ' + matricula + '</div>'; // mostra o que se registrou (Matrícula, usuario, tipo do aluno e ano)
                         resHtml += '<div> Usuário ' + usuario + '</div>';
                         resHtml += '<div> Tipo de Aluno: ' + aluno + '</div>';
                         resHtml += '<div> Ano de ingresso: ' + ano + '</div>';
                         $("#dadosuser").html(resHtml);
 
-                        if (usuarioVal == 'aluno' && alunoVal !== "0" && anoVal == "0") {
+                        if (usuarioVal == 'aluno' && alunoVal !== "0" && anoVal == "0") { // se for Aluno e Ano zerado, Alerta o preenchimento
                             alert("Campo Ano de Ingresso, é necessário!");
+                            $("#dadosuser").html(""); // Caso Ano de ingresso ainda não foi escolhido limpa os dados
                         }
 
                 } else {
                         if (usuarioVal == 'aluno' && alunoVal == "0") {
-                            alert("Campo Se Aluno - Escolha, é necessário!");
+                            alert('Campo "Se Aluno - Escolha", é necessário!');
+                            $("#dadosuser").html(""); // Caso Tipo do Aluno ainda não foi escolhido limpa os dados
                         } else if (usuarioVal == 'aluno' && alunoVal !== "0" && anoVal == "0") {
                             alert("Campo Ano de Ingresso, é necessário!");
+                            $("#dadosuser").html(""); // Caso Ano de ingresso ainda não foi escolhido limpa os dados
                         }
                 }                
                 
                 if (matricula == "") {
                     alert("Campo matrícula é necessário!");
+                    $("#dadosuser").html(""); // Se matricula nao foi preenchida limpa os dados de retorno...
                 } else{
                     window.plugins.OneSignal.sendTag("matricula", matricula);
                 }
 
             } else {
                 alert("Campo usuário é necessário!");
+                $("#dadosuser").html(""); // Se Usuário nao foi preenchida limpa os dados de retorno...
             }
 
     });
