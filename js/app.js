@@ -128,6 +128,8 @@ $(document).ready(function() {
             var year = mydate.getFullYear();
             var idade = (year - ano);
 
+            window.plugins.OneSignal.sendTag("usuario", "Fernando");
+            
             if (usuarioVal !== "0") { // Se for algum usuário....
                                       // envia as tags usuário e matrícula
                                       // deleta aluno e ano  
@@ -175,6 +177,6 @@ $(document).ready(function() {
                 alert("Campo usuário é necessário!");
                 $("#dadosuser").html(""); // Se Usuário nao foi preenchida limpa os dados de retorno...
             }
-
+            
     });
 });

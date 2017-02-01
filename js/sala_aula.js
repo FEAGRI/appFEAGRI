@@ -1,4 +1,6 @@
 	$(document).ready(function() {
+		hoje = new Date();
+		ano = hoje.getFullYear();
 	    switch (new Date().getDay()) {
 	        case 0:
 	            semana = "0domingo";
@@ -28,9 +30,9 @@
 	            semana = "6sábado";
 	            diasemana = "Sábado"
 	    }
-	    var url = "http://www.feagri.unicamp.br/portal/sistemas-intranet/grade-horarios?salaaula_ativa=S&salaaula_ano=2016&salaaula_anosemestre=2&salaaula_semana=" + semana;
+	    var url = "http://www.feagri.unicamp.br/portal/sistemas-intranet/grade-horarios?salaaula_ativa=S&salaaula_ano="+ano+"&salaaula_anosemestre=1&salaaula_semana="+semana;
 	    //var url = "js/sala_aula.json";
-	    // busca a URL e cria o array
+		// busca a URL e cria o array
 	    $.getJSON(url, function(data) {
 
 	        //limpa a div (se vc modificar ela não duplica resultados)	
