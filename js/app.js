@@ -78,7 +78,6 @@ $(document).ready(function() {
     });
 
     $('#ci_circular').change(function() {
-        $('#ci_documento').css("display", "block");
         $('#ci_documento').empty();
         $("#ci_documento").append('');
         if ($(this).val() == 1) { // Circular 1
