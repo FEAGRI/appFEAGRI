@@ -80,22 +80,32 @@ $(document).ready(function() {
     $('#ci_circular').change(function() {
         $('#ci_documento').empty();
         $("#ci_documento").append('');
+
+        html_ci1 = `<label for="ci_ponto" class="ui-hidden-accessible">Ponto</label>
+                    <select id="ci_ponto" name="ci_ponto" data-native-menu="false" required>
+                        <option>- Selecione Ponto -</option>
+                        <option value="CBMEG-FEAGRI">CBMEG FEAGRI</option>
+                    </select>`;
+        
+        html_ci2 = `<label for="ci_ponto" class="ui-hidden-accessible">Ponto</label>
+                    <select id="ci_ponto" name="ci_ponto" data-native-menu="false" required>
+                        <option>- Selecione Ponto -</option>
+                        <option value="FEAGRI-CCUEC">FEAGRI CCUEC</option>
+                        <option value="FEAGRI-EMBRAPA">FEAGRI EMBRAPA</option>
+                        <option value="FEAGRI-CBMEG">FEAGRI CBMEG</option>
+                        <option value="FEAGRI-GENETICA">FEAGRI GENETICA</option>
+                    </select>`;
+
         if ($(this).val() == 1) { // Circular 1
-                    $("#ci_documento").append('<label for="ci_ponto" class="ui-hidden-accessible">Ponto</label>');
-                    $("#ci_documento").append('<select id="ci_ponto" name="ci_ponto" data-native-menu="false" required>');
-                        $("#ci_documento").append('<option>- Selecione Ponto -</option>');
-                        $("#ci_documento").append('<option value="CBMEG-FEAGRI">CBMEG FEAGRI</option>');
-                    $("#ci_documento").append('</select>');
+                        $("#ci_documento").append(html_ci1);
+                        
         } else if ($(this).val() == 2) { // Circular 2
-                    $("#ci_documento").append('<label for="ci_ponto" class="ui-hidden-accessible">Ponto</label>');
-                    $("#ci_documento").append('<select id="ci_ponto" name="ci_ponto" data-native-menu="false" required>');
-                        $("#ci_documento").append('<option>- Selecione Ponto -</option>');
-                        $("#ci_documento").append('<option value="FEAGRI-CCUEC">FEAGRI CCUEC</option>');
-                        $("#ci_documento").append('<option value="FEAGRI-EMBRAPA">FEAGRI EMBRAPA</option>');
-                        $("#ci_documento").append('<option value="FEAGRI-CBMEG">FEAGRI CBMEG</option>');
-                        $("#ci_documento").append('<option value="FEAGRI-GENETICA">FEAGRI GENETICA</option>');
-                    $("#ci_documento").append('</select>');
+                        $("#ci_documento").append(html_ci2);
+                        
         } 
+        $("#ci_documento select").selectmenu();
+        $("#ci_documento select").selectmenu('refresh', true);
+
     });
 
     /*Perfil de Usuário*/
