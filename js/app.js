@@ -77,6 +77,32 @@ $(document).ready(function() {
         }
     });
 
+    $('#ci_circular').change(function() {
+        $('#documento').css("display", "block");
+        $('#documento').empty();
+        $("#documento").append('');
+        if ($(this).val() == 1) { // Circular 1
+                $("#documento").append('<div data-role="fieldcontain">');
+                    $("#documento").append('<label for="ci_ponto" class="ui-hidden-accessible">Ponto</label>');
+                    $("#documento").append('<select id="ci_ponto" name="ci_ponto" data-native-menu="false" required>');
+                        $("#documento").append('<option>- Selecione Ponto -</option>');
+                        $("#documento").append('<option value="CBMEG-FEAGRI">CBMEG FEAGRI</option>');
+                    $("#documento").append('</select>');
+                $("#documento").append('</div>');
+        } else if ($(this).val() == 2) { // Circular 2
+                $("#documento").append('<div data-role="fieldcontain">');
+                    $("#documento").append('<label for="ci_ponto" class="ui-hidden-accessible">Ponto</label>');
+                    $("#documento").append('<select id="ci_ponto" name="ci_ponto" data-native-menu="false" required>');
+                        $("#documento").append('<option>- Selecione Ponto -</option>');
+                        $("#documento").append('<option value="FEAGRI-CCUEC">FEAGRI CCUEC</option>');
+                        $("#documento").append('<option value="FEAGRI-EMBRAPA">FEAGRI EMBRAPA</option>');
+                        $("#documento").append('<option value="FEAGRI-CBMEG">FEAGRI CBMEG</option>');
+                        $("#documento").append('<option value="FEAGRI-GENETICA">FEAGRI GENETICA</option>');
+                    $("#documento").append('</select>');
+                $("#documento").append('</div>');
+        } 
+    });
+
     /*Perfil de Usuário*/
     var $select = $("#ano");
 
