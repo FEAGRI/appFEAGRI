@@ -1,5 +1,13 @@
 	$(document).ready(function() {
 		hoje = new Date();
+		mes = new Date().getMonth();
+		/* correção para 1º semestre ou 2º Semestre */
+		if (mes>=7) {
+			semestre = "2";
+		} else {
+			semestre = "1";
+		}
+		/*********************************************/
 		ano = hoje.getFullYear();
 	    switch (new Date().getDay()) {
 	        case 0:
@@ -30,7 +38,9 @@
 	            semana = "6sábado";
 	            diasemana = "Sábado"
 	    }
-	    var url = "http://www.feagri.unicamp.br/portal/sistemas-intranet/grade-horarios?salaaula_ativa=S&salaaula_ano="+ano+"&salaaula_anosemestre=1&salaaula_semana="+semana;
+	    /* corrigido a partir da linha 5 a 9 */
+	    /* incluido semestre no paramêtro da URL */
+	    var url = "http://www.feagri.unicamp.br/portal/sistemas-intranet/grade-horarios?salaaula_ativa=S&salaaula_ano="+ano+"&salaaula_anosemestre="+semestre+"&salaaula_semana="+semana;
 	    //var url = "js/sala_aula.json";
 		// busca a URL e cria o array
 	    $.getJSON(url, function(data) {
